@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/logoLight.svg">
     <link rel="stylesheet" href="style.css">
-    <script src="./carousel.js" defer></script>
+    <script src="./script.js" defer></script>
     <title>Lightning UI</title>
 </head>
 
-<body class="light">
+<body class="dark">
     <div class="overflay">
         <svg class="scrollArrows" width="54" height="64" viewBox="0 0 54 64" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -22,9 +22,11 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="./assets/logoLight.svg" alt="Lightning UI Logo">
+                <img class="logoLight" src="./assets/logoLight.svg" alt="Lightning UI Logo">
+                <img class="logoDark" src="./assets/logoDark.svg" alt="Lightning UI Logo">
                 <div class="branding">
                     <h1>Lightning UI</h1>
+                    <span>|</span>
                     <p>The UI CSS library for the Workout Buddy design system</p>
                 </div>
             </div>
@@ -40,7 +42,7 @@
                     <span class="navbarSeparator">|</span>
                     <li><a href="/" class="link">Usage</a></li>
                     <span class="navbarSeparator">|</span>
-                    <li><button><a href="/" class="link">Access Workout Buddy</a></button> </li>
+                    <li><button class="navCTA"><a href="/" class="link">Access Workout Buddy</a></button> </li>
                 </ul>
             </div>
         </nav>
@@ -71,7 +73,7 @@
                         </div>
                         <img src="./assets/image-removebg-preview.png" alt="">
                     </li>
-                    <li class="carousel__slide">
+                    <li class="carousel__slide reversed">
                         <svg width="1178" height="2379" viewBox="0 0 1178 2379" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -88,7 +90,7 @@
                                             fill="#DEFF0A" />
                                     </svg> </a></button>
                         </div>
-                        <img src="./assets/image-removebg-preview.png" alt="">
+                        <img src="./assets/image-removebg-preview (1).png" alt="">
                     </li>
                     <li class="carousel__slide">
                         <svg width="1178" height="2379" viewBox="0 0 1178 2379" fill="none"
@@ -107,7 +109,7 @@
                                             fill="#DEFF0A" />
                                     </svg> </a></button>
                         </div>
-                        <img src="./assets/image-removebg-preview.png" alt="">
+                        <img src="./assets/image-removebg-preview (2).png" alt="">
                     </li>
                 </ul>
             </div>
@@ -121,7 +123,23 @@
                 <button class="carousel__indicator"></button> -->
             </div>
         </div>
-        <div class="content" style="background-color: red;">&nbsp;
+        <div class="content">
+            <div class="headings">
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptas blanditiis esse natus. Quia
+                    cumque reprehenderit saepe minus aliquid voluptas explicabo soluta voluptate voluptates, ipsa amet
+                    ea dolorum laudantium consectetur <a href="/">recusandae iure eligendi blanditiis</a>, velit
+                    incidunt quam
+                    dignissimos! Praesentium, odit! Vel illo porro fuga, esse quam dolores quisquam ratione reiciendis
+                    hic nulla, accusantium cumque. Omnis voluptate dicta beatae velit eligendi error quae repellat
+                    repudiandae quidem! Error, cumque eveniet totam, modi repellendus ad veniam voluptatem quo illum
+                    iusto, adipisci ullam tempore veritatis maiores sint culpa alias laudantium consequatur ut quam
+                    aspernatur aperiam voluptates ratione? Labore corrupti doloremque maxime vero dolorem. Cumque
+                    doloribus cupiditate quasi animi iste, quae dignissimos, obcaecati dolore neque labore rerum nisi
+                    porro error pariatur nihil deleniti ab commodi.</p>
+            </div>
         </div>
     </main>
     <footer>

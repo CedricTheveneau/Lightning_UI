@@ -54,3 +54,27 @@ function doSetTimeout(i) {
     dots[i].click();
   }, 5000 * i);
 }
+
+//* Changes the navbar bg on scroll
+window.addEventListener("scroll", () => {
+  if (scrollY > 10) {
+    document.querySelector("nav").style.backgroundColor = "var(--secondary10)";
+  } else {
+    document.querySelector("nav").style.backgroundColor = "transparent";
+  }
+});
+364;
+
+window.onscroll = function (ev) {
+  if (
+    window.innerHeight + Math.round(window.scrollY) >=
+    document.body.offsetHeight
+  ) {
+    document.querySelector(".overflay svg").style.transform = "rotateZ(180deg)";
+  } else if (
+    window.innerHeight + Math.round(window.scrollY) <=
+    document.body.offsetHeight / 2
+  ) {
+    document.querySelector(".overflay svg").style.transform = "rotateZ(0deg)";
+  }
+};

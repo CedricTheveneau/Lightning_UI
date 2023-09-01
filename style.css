@@ -24,9 +24,9 @@ button {
 /** Variables definition **/
 :root {
   --primary: #deff0a;
-  --primary50: #deff0a80;
   --secondary: #03001f;
   --secondary50: #03001f80;
+  --secondary10: #03001f50;
   --accentDark: #2b0aff;
   --accentLight: #ebfcfb;
   --goldenRatio: 1.618;
@@ -37,15 +37,16 @@ button {
   --heroOutline: 4px;
   --h1Size: 59.3px;
   --h1Weight: 900;
-  --h1Outline: 3px;
+  --h1Outline: 4px;
   --h2Size: 36.65px;
-  --h2Weight: 600;
-  --h2Outline: 2px;
+  --h2Weight: 700;
+  --h2Outline: 3px;
   --h3Size: 22.65px;
-  --h3Weight: 500;
+  --h3Weight: 600;
   --h3Outline: 1px;
-  --textSize: 14px;
-  --textWeight: 400;
+  --textSize: 16px;
+  --textWeight: 500;
+  --textLineHeight: 25px;
   --montserrat: "Montserrat";
   --quicksand: "Quicksand";
   --skew: 25deg;
@@ -57,24 +58,74 @@ h2,
 h3 {
   font-family: var(--montserrat), sans-serif;
   font-style: italic;
+  /* text-transform: uppercase; */
 }
 
 h1 {
   font-size: var(--h1Size);
+  font-weight: var(--h1Weight);
+  --textOutline: var(--h1Outline);
+  --textShadow: 6px;
+  text-shadow: calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
+      var(--primary),
+    calc((var(--textOutline) / 2) * -1) calc((var(--textOutline) / 2) * -1) 0
+      var(--primary),
+    calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0
+      var(--primary),
+    calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0
+      var(--primary),
+    calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
+    var(--textShadow) var(--textShadow) 0px var(--secondary);
 }
 
 h2 {
   font-size: var(--h2Size);
+  font-weight: var(--h2Weight);
+  --textOutline: var(--h2Outline);
+  --textShadow: 4px;
+  text-shadow: calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
+      var(--primary),
+    calc((var(--textOutline) / 2) * -1) calc((var(--textOutline) / 2) * -1) 0
+      var(--primary),
+    calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0
+      var(--primary),
+    calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0
+      var(--primary),
+    calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
+    var(--textShadow) var(--textShadow) 0px var(--secondary);
+}
+
+h3 {
+  font-size: var(--h3Size);
+  font-weight: var(--h3Weight);
+  --textOutline: var(--h3Outline);
+  --textShadow: 2px;
+  text-shadow: calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
+      var(--primary),
+    calc((var(--textOutline) / 2) * -1) calc((var(--textOutline) / 2) * -1) 0
+      var(--primary),
+    calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0
+      var(--primary),
+    calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0
+      var(--primary),
+    calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
+    var(--textShadow) var(--textShadow) 0px var(--secondary);
 }
 
 p {
   font-family: var(--quicksand), sans-serif;
   font-weight: var(--textWeight);
   font-style: var(--textSize);
+  line-height: var(--textLineHeight);
+}
+
+p > a {
+  text-decoration: none;
+  font-weight: 600;
 }
 
 /** Light theme style **/
-body.light {
+body {
   background-color: var(--primary);
   color: var(--secondary);
   font-size: var(--textSize);
@@ -83,11 +134,14 @@ body.light {
   > .overflay {
     width: fit-content;
     height: fit-content;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 50%;
     transform: translateX(-50%) translateY(90dvh);
     z-index: 2;
+    > svg {
+      transition: transform 300ms ease-in-out;
+    }
   }
   > header {
     position: fixed;
@@ -98,19 +152,29 @@ body.light {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
       .logo {
         padding-left: 10px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         gap: 10px;
+        > img {
+          width: 25px;
+        }
+        > .logoDark {
+          display: none;
+        }
         > .branding {
-          display: grid;
-          gap: 5px;
+          display: flex;
+          align-items: center;
+          gap: 15px;
           > h1 {
-            --textOutline: calc(var(--heroOutline) / 2);
+            --textOutline: calc(
+              var(--heroOutline) / calc(var(--goldenRatio) * 2)
+            );
             --textShadow: 3px;
-            font-size: calc(95.95px / calc(var(--goldenRatio) * 2));
+            font-size: var(--h3Size);
             text-shadow: calc(var(--textOutline) / 2)
                 calc(var(--textOutline) / 2) 0 var(--primary),
               calc((var(--textOutline) / 2) * -1)
@@ -122,6 +186,9 @@ body.light {
               calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
                 var(--primary),
               var(--textShadow) var(--textShadow) 0px var(--secondary);
+          }
+          > span {
+            font-size: var(--h3Size);
           }
           > p {
             font-weight: 600;
@@ -145,6 +212,7 @@ body.light {
               font-weight: var(--h3Weight);
               font-style: italic;
               position: relative;
+              --afterColor: var(--secondary);
             }
             > a::after {
               content: "";
@@ -153,7 +221,7 @@ body.light {
               top: 120%;
               transform: skew(calc(var(--skew) * -1));
               position: absolute;
-              background-color: var(--secondary);
+              background-color: var(--afterColor);
               scale: 0;
               transform-origin: right center;
               transition: scale 250ms ease-in-out;
@@ -175,6 +243,7 @@ body.light {
                 font-style: italic;
                 position: relative;
                 transition: color 250ms ease-in-out;
+                --afterColor2: var(--secondary);
               }
               > a:hover,
               a:active {
@@ -188,7 +257,7 @@ body.light {
                 height: 150%;
                 transform: skew(calc(var(--skew) * -1));
                 position: absolute;
-                background-color: var(--secondary);
+                background-color: var(--afterColor2);
                 scale: 1;
                 transition: height 250ms ease-in-out, top 250ms ease-in-out,
                   left 250ms ease-in-out, width 250ms ease-in-out;
@@ -211,7 +280,7 @@ body.light {
     }
   }
   > main {
-    .carousel {
+    > .carousel {
       height: 100dvh;
       width: 100%;
       overflow-y: hidden;
@@ -243,7 +312,7 @@ body.light {
               position: absolute;
               left: 40%;
               > path {
-                fill: var(--secondary50);
+                fill: var(--secondary10);
               }
             }
             > .hero {
@@ -327,6 +396,26 @@ body.light {
             }
             > img {
               width: 45%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+          > .carousel__slide.reversed {
+            > svg {
+              left: -20%;
+            }
+            > .hero {
+              transform: translateX(-90px);
+              order: 2;
+              display: flex;
+              flex-direction: column;
+              align-items: end;
+              > h2 {
+                text-align: right;
+              }
+              > p {
+                text-align: right;
+              }
             }
           }
           > .carousel__slide.current-slide {
@@ -361,6 +450,388 @@ body.light {
           transform: scaleY(0);
           position: absolute;
           animation: carouselMarkerLoad 5000ms forwards;
+        }
+      }
+    }
+    > .content {
+      height: 100dvh;
+      padding: 65px;
+      > .headings {
+        display: grid;
+        gap: 20px;
+        > p {
+          > a {
+            color: var(--accentDark);
+          }
+        }
+      }
+    }
+  }
+}
+
+/** Dark theme style **/
+body.dark {
+  --primary: #03001f;
+  --secondary: #deff0a;
+  --secondary50: #deff0a80;
+  --secondary10: #deff0a17;
+  --accentDark: #2b0aff;
+  --accentLight: #ebfcfb;
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-size: var(--textSize);
+  font-weight: var(--textWeight);
+  position: relative;
+  > .overflay {
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%) translateY(90dvh);
+    z-index: 2;
+    > svg {
+      transition: transform 300ms ease-in-out;
+    }
+  }
+  > header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    > nav {
+      padding-block: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+      .logo {
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        > img {
+          width: 25px;
+        }
+        > .logoLight {
+          display: none;
+        }
+        > .logoDark {
+          display: block;
+        }
+        > .branding {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          > h1 {
+            --textOutline: calc(
+              var(--heroOutline) / calc(var(--goldenRatio) * 2)
+            );
+            --textShadow: 3px;
+            font-size: var(--h3Size);
+            text-shadow: calc(var(--textOutline) / 2)
+                calc(var(--textOutline) / 2) 0 var(--primary),
+              calc((var(--textOutline) / 2) * -1)
+                calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+              calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0
+                var(--primary),
+              calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0
+                var(--primary),
+              calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
+                var(--primary),
+              var(--textShadow) var(--textShadow) 0px var(--secondary);
+          }
+          > span {
+            font-size: var(--h3Size);
+          }
+          > p {
+            font-weight: 600;
+            font-style: calc(36.75px / var(--goldenRatio));
+          }
+        }
+      }
+      .navbar {
+        padding-right: 20px;
+        > ul.links {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          list-style: none;
+          gap: 10px;
+          > * {
+            color: var(--secondary);
+            font-weight: var(--h3Weight);
+            > a {
+              color: var(--secondary);
+              font-weight: var(--h3Weight);
+              font-style: italic;
+              position: relative;
+              --afterColor: var(--secondary);
+            }
+            > a::after {
+              content: "";
+              inset: 0;
+              height: 4px;
+              top: 120%;
+              transform: skew(calc(var(--skew) * -1));
+              position: absolute;
+              background-color: var(--afterColor);
+              scale: 0;
+              transform-origin: right center;
+              transition: scale 250ms ease-in-out;
+            }
+            > a:hover::after,
+            a.active::after {
+              transform-origin: left center;
+              scale: 1;
+            }
+            > button {
+              padding: 5px;
+              border: transparent;
+              background-color: transparent;
+              font-size: var(--textSize);
+              font-weight: var(--textWeight);
+              > a {
+                color: var(--primary);
+                font-weight: var(--h3Weight);
+                font-style: italic;
+                position: relative;
+                transition: color 250ms ease-in-out;
+                --afterColor2: var(--secondary);
+              }
+              > a:hover,
+              a:active {
+                color: var(--secondary);
+              }
+              > a::after {
+                content: "";
+                left: -5%;
+                top: -20%;
+                width: 110%;
+                height: 150%;
+                transform: skew(calc(var(--skew) * -1));
+                position: absolute;
+                background-color: var(--afterColor2);
+                scale: 1;
+                transition: height 250ms ease-in-out, top 250ms ease-in-out,
+                  left 250ms ease-in-out, width 250ms ease-in-out;
+                z-index: -1;
+              }
+              > a:hover::after,
+              a:active::after {
+                height: 4px;
+                top: 120%;
+                left: 0%;
+                width: 100%;
+              }
+            }
+          }
+          > span {
+            transform: skew(calc(var(--skew) * -1));
+          }
+        }
+      }
+    }
+  }
+  > main {
+    > .carousel {
+      height: 100dvh;
+      width: 100%;
+      overflow-y: hidden;
+      position: relative;
+      > *.hidden {
+        display: none;
+      }
+      > .carousel__track-container {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        > .carousel__track {
+          position: relative;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          transition: transform ease-in 250ms;
+          > .carousel__slide {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            > svg {
+              position: absolute;
+              left: 40%;
+              > path {
+                fill: var(--secondary10);
+              }
+            }
+            > .hero {
+              width: 50%;
+              transform: translateX(90px);
+              > h2 {
+                --textOutline: var(--heroOutline);
+                --textShadow: 6px;
+                font-size: var(--heroSize);
+                font-weight: var(--heroWeight);
+                line-height: var(--heroLineHeight);
+                text-transform: uppercase;
+                text-shadow: calc(var(--textOutline) / 2)
+                    calc(var(--textOutline) / 2) 0 var(--primary),
+                  calc((var(--textOutline) / 2) * -1)
+                    calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+                  calc(var(--textOutline) / 2)
+                    calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+                  calc((var(--textOutline) / 2) * -1)
+                    calc(var(--textOutline) / 2) 0 var(--primary),
+                  calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
+                    var(--primary),
+                  var(--textShadow) var(--textShadow) 0px var(--secondary);
+              }
+              > p {
+                margin-top: 10px;
+                margin-bottom: 50px;
+                font-size: var(--h2Size);
+                font-weight: var(--h2Weight);
+              }
+              > button {
+                /* transform: translateX(30px); */
+                padding: 5px;
+                border: transparent;
+                background-color: transparent;
+                font-size: var(--h2Size);
+                font-weight: var(--h3Weight);
+                > a {
+                  color: var(--primary);
+                  font-weight: var(--h3Weight);
+                  font-style: italic;
+                  position: relative;
+                  transition: color 250ms ease-in-out;
+                  > svg {
+                    > path {
+                      fill: var(--primary);
+                      transition: fill 250ms ease-in-out;
+                    }
+                  }
+                }
+                > a:hover,
+                a:active,
+                a path {
+                  color: var(--secondary);
+                  & path {
+                    fill: var(--secondary);
+                  }
+                }
+                > a::after {
+                  content: "";
+                  left: -5%;
+                  top: -20%;
+                  width: 110%;
+                  height: 150%;
+                  transform: skew(calc(var(--skew) * -1));
+                  position: absolute;
+                  background-color: var(--secondary);
+                  scale: 1;
+                  transition: height 250ms ease-in-out, top 250ms ease-in-out,
+                    left 250ms ease-in-out, width 250ms ease-in-out;
+                  z-index: -1;
+                }
+                > a:hover::after,
+                a:active::after {
+                  height: 4px;
+                  top: 120%;
+                  left: 0%;
+                  width: 100%;
+                }
+              }
+            }
+            > img {
+              width: 45%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+          > .carousel__slide.reversed {
+            > svg {
+              left: -20%;
+            }
+            > .hero {
+              transform: translateX(-90px);
+              order: 2;
+              display: flex;
+              flex-direction: column;
+              align-items: end;
+              > h2 {
+                text-align: right;
+              }
+              > p {
+                text-align: right;
+              }
+            }
+          }
+          > .carousel__slide.current-slide {
+            z-index: 1;
+            background-color: var(--primary);
+          }
+        }
+      }
+      > .carousel__nav {
+        position: absolute;
+        z-index: 2;
+        right: 10px;
+        bottom: 10px;
+        display: grid;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        > .carousel__indicator {
+          border: transparent;
+          background-color: var(--secondary50);
+          width: 8px;
+          aspect-ratio: 1 / 5;
+          transform: skewY(25deg);
+          position: relative;
+          transition: opacity 250ms ease-in-out;
+        }
+        > .carousel__indicator.current-slide::after {
+          content: "";
+          background-color: var(--accentLight);
+          inset: 0;
+          width: 100%;
+          transform: scaleY(0);
+          position: absolute;
+          animation: carouselMarkerLoad 5000ms forwards;
+        }
+      }
+    }
+    > .content {
+      height: 100dvh;
+      padding: 100px;
+      > .headings {
+        display: grid;
+        gap: 20px;
+        > p {
+          > a {
+            color: var(--accentLight);
+            position: relative;
+          }
+          > a::after {
+            position: absolute;
+            content: "";
+            background-color: var(--accentLight);
+            height: 3px;
+            inset: 0;
+            transform: translateY(20px) scaleX(0) skew(calc(var(--skew) * -1));
+            transform-origin: right center;
+            transition: transform 250ms ease-in-out;
+          }
+          > a:hover::after {
+            transform: translateY(20px) scaleX(1) skew(calc(var(--skew) * -1));
+            transform-origin: left center;
+          }
         }
       }
     }
@@ -401,6 +872,19 @@ body.light {
   }
 }
 
+.branding > span {
+  animation: slideIn 250ms 250ms forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .carousel__indicator.current-slide::after {
   animation: carouselMarkerLoad 5000ms forwards;
 }
@@ -431,6 +915,14 @@ body.light {
 
 .carousel__slide.current-slide > img {
   animation: carouselEntryRight 500ms 150ms forwards;
+}
+
+.carousel__slide.current-slide.reversed > .hero {
+  animation: carouselEntryRight 500ms 150ms forwards;
+}
+
+.carousel__slide.current-slide.reversed > img {
+  animation: carouselEntryLeft 500ms 150ms forwards;
 }
 
 @keyframes carouselEntryLeft {
