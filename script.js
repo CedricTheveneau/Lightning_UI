@@ -65,13 +65,14 @@ function doSetTimeout(i) {
 //* Changes the navbar bg on scroll
 window.addEventListener("scroll", () => {
   if (scrollY > 10) {
-    document.querySelector("nav").style.backgroundColor = "var(--secondary10)";
+    document.querySelector("header").style.backgroundColor = "var(--primary)";
   } else {
-    document.querySelector("nav").style.backgroundColor = "transparent";
+    document.querySelector("header").style.backgroundColor = "transparent";
   }
 });
 364;
 
+//* Turns arrows 180deg once you've reached 50% scroll on the screen
 window.onscroll = function (ev) {
   if (
     window.innerHeight + Math.round(window.scrollY) >=
