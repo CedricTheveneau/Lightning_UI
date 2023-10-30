@@ -1,20 +1,25 @@
+//! ---------- CAROUSEL ---------- !//
+
+//* Set needed variables
 const track = document.querySelector(".carousel__track");
 const slides = Array.from(track.children);
 const dotsNav = document.querySelector(".carousel__nav");
-// Pushes as much navdots as there are slides in the carousel, for a better reusability
+
+//* Pushes as much navdots as there are slides in the carousel, for a better reusability
 for (let i = 0; i < slides.length; i++) {
   dotsNav.innerHTML += '<button class="carousel__indicator"></button>';
 }
 const dots = Array.from(dotsNav.children);
 dots[0].classList.add("current-slide");
 const slideWidth = slides[0].getBoundingClientRect().width;
-// Arrange the slides next to one another
+
+//* Arrange the slides next to one another
 const setSlidePosition = (slide, index) => {
   slide.style.left = slideWidth * index + "px";
 };
 slides.forEach(setSlidePosition);
 
-// Move slide
+//* Move slide
 const moveToSlide = (currentSlide, targetSlide, targetDot, targetIndex) => {
   const currentDot = dotsNav.querySelector(".current-slide");
   track.style.transform = "translateX(-" + targetSlide.style.left + ")";
@@ -25,7 +30,7 @@ const moveToSlide = (currentSlide, targetSlide, targetDot, targetIndex) => {
   targetDot.classList.add("current-slide");
 };
 
-// when I click the nav indicators, move to that slide
+//* When I click the nav indicators, move to that slide
 dotsNav.addEventListener("click", (e) => {
   const targetDot = e.target.closest("button");
 
@@ -55,6 +60,8 @@ function doSetTimeout(i) {
   }, 5000 * i);
 }
 
+//! ---------- NAVBAR ---------- !//
+
 //* Changes the navbar bg on scroll
 window.addEventListener("scroll", () => {
   if (scrollY > 10) {
@@ -78,3 +85,39 @@ window.onscroll = function (ev) {
     document.querySelector(".overflay svg").style.transform = "rotateZ(0deg)";
   }
 };
+
+//! ---------- DARK/LIGHT MODE ---------- !//
+
+//* Set needed variables
+const button = document.querySelector(".darkModeToggle");
+const svgs = document.querySelectorAll(".darkModeToggleSVG");
+const body = document.getElementsByTagName("body")[0];
+
+//* Detects click on button and changes the displayed SVG and saves in local storage the theme preference
+button.addEventListener("click", () => {
+  svgs.forEach((e) => {
+    e.classList.toggle("toggle");
+  });
+  if (svgs[1].classList.contains("toggle")) {
+    localStorage.setItem("LightningUI-Theme", "Light");
+    body.classList.remove("dark");
+  } else {
+    localStorage.setItem("LightningUI-Theme", "Dark");
+    body.classList.add("dark");
+  }
+});
+
+//* Fetches if a prefered theme is defined in local storage, if yes, uses it
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    const preferedTheme = localStorage.getItem("LightningUI-Theme");
+    if (preferedTheme == null || preferedTheme == "Light") {
+      return;
+    } else if (preferedTheme == "Dark") {
+      button.click();
+      body.classList.add("dark");
+    }
+  },
+  false
+);

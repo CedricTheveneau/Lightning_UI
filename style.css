@@ -139,8 +139,10 @@ body {
     left: 50%;
     transform: translateX(-50%) translateY(90dvh);
     z-index: 2;
-    > svg {
-      transition: transform 300ms ease-in-out;
+    > a {
+      > svg {
+        transition: transform 300ms ease-in-out;
+      }
     }
   }
   > header {
@@ -269,6 +271,13 @@ body {
                 top: 120%;
                 left: 0%;
                 width: 100%;
+              }
+              > svg {
+                transform: translateY(10%);
+                display: none;
+              }
+              > svg.toggle {
+                display: block;
               }
             }
           }
@@ -455,14 +464,28 @@ body {
     }
     > .content {
       height: 100dvh;
-      padding: 65px;
-      > .headings {
-        display: grid;
-        gap: 20px;
-        > p {
-          > a {
-            color: var(--accentDark);
-          }
+      padding: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      > p {
+        > a {
+          color: var(--accentDark);
+          position: relative;
+        }
+        > a::after {
+          position: absolute;
+          content: "";
+          background-color: var(--accentDark);
+          height: 3px;
+          inset: 0;
+          transform: translateY(20px) scaleX(0) skew(calc(var(--skew) * -1));
+          transform-origin: right center;
+          transition: transform 250ms ease-in-out;
+        }
+        > a:hover::after {
+          transform: translateY(20px) scaleX(1) skew(calc(var(--skew) * -1));
+          transform-origin: left center;
         }
       }
     }
@@ -490,8 +513,13 @@ body.dark {
     left: 50%;
     transform: translateX(-50%) translateY(90dvh);
     z-index: 2;
-    > svg {
-      transition: transform 300ms ease-in-out;
+    > a {
+      > svg {
+        transition: transform 300ms ease-in-out;
+        > path {
+          stroke: #deff0a;
+        }
+      }
     }
   }
   > header {
@@ -810,28 +838,27 @@ body.dark {
     > .content {
       height: 100dvh;
       padding: 100px;
-      > .headings {
-        display: grid;
-        gap: 20px;
-        > p {
-          > a {
-            color: var(--accentLight);
-            position: relative;
-          }
-          > a::after {
-            position: absolute;
-            content: "";
-            background-color: var(--accentLight);
-            height: 3px;
-            inset: 0;
-            transform: translateY(20px) scaleX(0) skew(calc(var(--skew) * -1));
-            transform-origin: right center;
-            transition: transform 250ms ease-in-out;
-          }
-          > a:hover::after {
-            transform: translateY(20px) scaleX(1) skew(calc(var(--skew) * -1));
-            transform-origin: left center;
-          }
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      > p {
+        > a {
+          color: var(--accentLight);
+          position: relative;
+        }
+        > a::after {
+          position: absolute;
+          content: "";
+          background-color: var(--accentLight);
+          height: 3px;
+          inset: 0;
+          transform: translateY(20px) scaleX(0) skew(calc(var(--skew) * -1));
+          transform-origin: right center;
+          transition: transform 250ms ease-in-out;
+        }
+        > a:hover::after {
+          transform: translateY(20px) scaleX(1) skew(calc(var(--skew) * -1));
+          transform-origin: left center;
         }
       }
     }
@@ -839,14 +866,14 @@ body.dark {
 }
 
 /** Keyframes usage, (they don't work while indented) **/
-.overflay > svg.scrollArrows > path:nth-child(1) {
+.overflay > a > svg.scrollArrows > path:nth-child(1) {
   animation: scrollArrowsFlash 2000ms infinite;
 }
 
-.overflay > svg.scrollArrows > path:nth-child(2) {
+.overflay > a > svg.scrollArrows > path:nth-child(2) {
   animation: scrollArrowsFlash 2000ms 100ms infinite;
 }
-.overflay > svg.scrollArrows > path:nth-child(3) {
+.overflay > a > svg.scrollArrows > path:nth-child(3) {
   animation: scrollArrowsFlash 2000ms 200ms infinite;
 }
 
