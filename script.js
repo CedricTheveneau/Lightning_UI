@@ -81,7 +81,7 @@ window.onscroll = function (ev) {
     document.querySelector(".overflay svg").style.transform = "rotateZ(180deg)";
   } else if (
     window.innerHeight + Math.round(window.scrollY) <=
-    document.body.offsetHeight / 2
+    window.innerHeight
   ) {
     document.querySelector(".overflay svg").style.transform = "rotateZ(0deg)";
   }
