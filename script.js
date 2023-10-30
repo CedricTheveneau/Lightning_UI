@@ -72,11 +72,11 @@ window.addEventListener("scroll", () => {
 });
 364;
 
-//* Turns arrows 180deg once you've reached 50% scroll on the screen
+//* Turns arrows 180deg once you've reached the bottom of the screen
 window.onscroll = function (ev) {
   if (
     window.innerHeight + Math.round(window.scrollY) >=
-    document.body.offsetHeight
+    document.body.offsetHeight - 20
   ) {
     document.querySelector(".overflay svg").style.transform = "rotateZ(180deg)";
   } else if (
