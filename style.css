@@ -272,11 +272,11 @@ body {
                 left: 0%;
                 width: 100%;
               }
-              > svg {
+              > svg.darkModeToggleSVG {
                 transform: translateY(10%);
                 display: none;
               }
-              > svg.toggle {
+              > svg.darkModeToggleSVG.toggle {
                 display: block;
               }
             }
@@ -863,6 +863,15 @@ body.dark {
       }
     }
   }
+}
+
+/** For styles that don't work while nested **/
+svg.darkModeToggleSVG {
+  transform: translateY(10%);
+  display: none;
+}
+svg.darkModeToggleSVG.toggle {
+  display: block;
 }
 
 /** Keyframes usage, (they don't work while indented) **/
