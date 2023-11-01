@@ -173,6 +173,6 @@ DLBtns.forEach((e) => {
 const billContainer = document.querySelector(".blogBillCollection");
 if (billContainer !== null) {
   billData.forEach((e) => {
-    billContainer.innerHTML += `<div class='blogBill'><img src='${e.img}' alt='Thumbnail'><details><summary><p>${e.title}</p>${e.summary}<div class='tags'>${e.tags}</div></summary>${e.content}</details></div>`;
+    billContainer.innerHTML += `<div class='blogBill'><img src='${e.img}' alt='Thumbnail'><details><summary><p>${e.title}</p>${e.summary}<div class='tags'>${e.tags} ${e.date}</div></summary>${e.content}</details></div>`;
   });
 }

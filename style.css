@@ -9,6 +9,7 @@
   --secondary10: #03001f50;
   --accentDark: #2b0aff;
   --accentLight: #ebfcfb;
+  --accentLight10: #ebfcfb50;
   --goldenRatio: 1.618;
   --goldenRatioHalf: var(--goldenRatio) / 2;
   --heroSize: 95.95px;
@@ -534,7 +535,7 @@ body {
       }
       & .blogBill {
         width: 100%;
-        background-color: var(--accentLight);
+        background-color: var(--accentLight10);
         border-radius: 25px;
         color: var(--secondary);
         padding: 20px;
@@ -542,6 +543,7 @@ body {
         justify-items: center;
         gap: 15px;
         grid-template-columns: 1fr 3fr;
+        transition: background-color 250ms ease-in-out;
         > img {
           max-width: 200px;
           aspect-ratio: 1;
@@ -563,11 +565,12 @@ body {
             }
             > .tags {
               display: flex;
+              align-items: center;
               gap: 10px;
               > .tag {
                 padding: 5px 10px;
                 border-radius: 50px;
-                font-weight: var(--h3Weight);
+                font-weight: var(--h2Weight);
               }
               > .tag.release {
                 background-color: var(--primary);
@@ -575,6 +578,10 @@ body {
               > .tag.feature {
                 background-color: var(--accentDark);
                 color: var(--accentLight);
+              }
+              > p {
+                font-style: italic;
+                font-weight: var(--h2Weight);
               }
             }
           }
@@ -587,6 +594,10 @@ body {
             font-size: calc(var(--h3Size) - 4px);
           }
         }
+      }
+      & .blogBill:hover,
+      .blogBill:focus-within {
+        background-color: var(--accentLight);
       }
       & ul {
         padding: 0 0 0 25px;
@@ -1295,6 +1306,35 @@ body.dark {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      & .blogBillCollection {
+        display: grid;
+        gap: 20px;
+      }
+      & .blogBill {
+        width: 100%;
+        background-color: var(--accentLight10);
+        border-radius: 25px;
+        color: var(--secondary);
+        padding: 20px;
+        display: grid;
+        justify-items: center;
+        gap: 15px;
+        grid-template-columns: 1fr 3fr;
+        > details {
+          > summary {
+            > .tags {
+              > .tag.release {
+                background-color: var(--primary);
+                color: var(--secondary);
+              }
+            }
+          }
+        }
+      }
+      & .blogBill:hover,
+      .blogBill:focus-within {
+        background-color: var(--secondary10);
+      }
       & p {
         > a {
           color: var(--accentLight);
