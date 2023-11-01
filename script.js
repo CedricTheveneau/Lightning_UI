@@ -176,3 +176,28 @@ if (billContainer !== null) {
     billContainer.innerHTML += `<div class='blogBill'><img src='${e.img}' alt='Thumbnail'><details><summary><p>${e.title}</p>${e.summary}<div class='tags'>${e.tags} ${e.date}</div></summary>${e.content}</details></div>`;
   });
 }
+
+//! ---------- RESPONSIVE MENU TOGGLE ---------- !//
+
+//* Set needed variables
+const menuToggle = document.querySelector(".navbarToggle");
+const toggleSvgs = document.querySelectorAll(".navbarToggleSVG");
+const navbar = document.querySelectorAll(".navbar")[0];
+
+//* Detects click on menuToggle and changes the displayed SVG and saves in local storage the theme preference
+menuToggle.addEventListener("click", () => {
+  toggleSvgs.forEach((e) => {
+    console.log(e);
+    e.classList.toggle("toggle");
+  });
+  if (toggleSvgs[0].classList.contains("toggle")) {
+    navbar.classList.remove("active");
+  } else {
+    navbar.classList.add("active");
+  }
+});
+
+//* Prevents the keyframe on page load
+setTimeout(function () {
+  document.body.classList.remove("preload");
+}, 500);
