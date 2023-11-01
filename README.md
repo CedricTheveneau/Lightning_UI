@@ -21,10 +21,10 @@ This library only uses HTML, CSS and JS.
 
 ## Flags :
 
-- [] Responsive
-- [] SEO optimisation
-- [] Licensing
-- [] Accessibility features
+- [ ] Responsive
+- [ ] SEO optimisation
+- [ ] Licensing
+- [ ] Accessibility features
 
 ## Quick start :
 
