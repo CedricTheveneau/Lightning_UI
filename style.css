@@ -154,7 +154,8 @@ body {
     opacity: 0;
     position: absolute;
     background-color: var(--primary);
-    animation: titleAccentEntry 1000ms 500ms forwards;
+    animation: titleAccentEntry 1000ms 500ms forwards,
+      titleAccentIdle 3000ms 1500ms infinite ease-in-out;
   }
   & .accent::before {
     content: "";
@@ -165,7 +166,8 @@ body {
     opacity: 0;
     position: absolute;
     background-color: var(--primary);
-    animation: titleAccentEntrySecond 1000ms 500ms forwards;
+    animation: titleAccentEntrySecond 1000ms 500ms forwards,
+      titleAccentSecondIdle 3000ms 1500ms infinite ease-in-out;
   }
   > .socials {
     position: absolute;
@@ -581,7 +583,7 @@ body {
                 > path {
                   fill: var(--secondary);
                   scale: 0.7;
-                  transform: translateY(25%) translateX(25%);
+                  transform: translateY(35%) translateX(25%);
                   transition: fill 250ms 250ms ease-in-out;
                 }
               }
@@ -1383,6 +1385,20 @@ a:hover > svg.ctaArrow.pulse {
   }
 }
 
+@keyframes titleAccentIdle {
+  0%,
+  100% {
+    top: 0%;
+    transform: translateY(25%) translateX(-350%) skew(calc(var(--skew) * -1.3))
+      rotate(0deg);
+  }
+  50% {
+    top: 0%;
+    transform: translateY(40%) translateX(-350%) skew(calc(var(--skew) * -1.3))
+      rotate(0deg);
+  }
+}
+
 @keyframes titleAccentEntrySecond {
   0% {
     top: 50%;
@@ -1396,5 +1412,20 @@ a:hover > svg.ctaArrow.pulse {
       skew(calc(var(--skew) * -1.3)) rotate(0deg);
     box-shadow: 5px 5px 0px var(--secondary);
     opacity: 1;
+  }
+}
+
+@keyframes titleAccentSecondIdle {
+  0%,
+  100% {
+    top: 100%;
+    transform: translateY(-125%) translateX(-250%)
+      skew(calc(var(--skew) * -1.3)) rotate(0deg);
+  }
+
+  50% {
+    top: 100%;
+    transform: translateY(-110%) translateX(-250%)
+      skew(calc(var(--skew) * -1.3)) rotate(0deg);
   }
 }
