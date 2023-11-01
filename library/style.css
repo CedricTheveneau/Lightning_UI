@@ -1223,23 +1223,16 @@ svg.darkModeToggleSVG.toggle {
   }
 }
 
-.branding > span,
-.branding > p {
-  animation: slideIn 1500ms forwards;
+.branding > span {
+  animation: slideIn 250ms 250ms forwards;
 }
 
 @keyframes slideIn {
   0% {
     transform: translateX(-100px);
-    opacity: 0;
-  }
-  70% {
-    opacity: 0;
-    transform: translateX(-50px);
   }
   100% {
     transform: translateX(0);
-    opacity: 1;
   }
 }
 
