@@ -715,7 +715,9 @@ body {
           > * {
             color: var(--secondary);
             font-weight: var(--h3Weight);
-            > a {
+            > a,
+            a > svg > path {
+              fill: var(--secondary);
               color: var(--secondary);
               font-weight: var(--h3Weight);
               font-style: italic;
@@ -723,6 +725,9 @@ body {
               --afterColor: var(--secondary);
               --transform-origin: right center;
               --transform-origin-alt: left center;
+            }
+            > a:has(svg):hover::after {
+              scale: 0;
             }
             > a::after {
               content: "";

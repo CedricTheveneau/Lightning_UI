@@ -1,64 +1,70 @@
 //! ---------- CAROUSEL ---------- !//
+const carouselSetup = () => {
+  //* Set needed variables
+  const track = document.querySelector(".carousel__track");
+  if (track == null) {
+    return;
+  } else {
+    const slides = Array.from(track.children);
+    const dotsNav = document.querySelector(".carousel__nav");
 
-//* Set needed variables
-const track = document.querySelector(".carousel__track");
-const slides = Array.from(track.children);
-const dotsNav = document.querySelector(".carousel__nav");
+    //* Pushes as much navdots as there are slides in the carousel, for a better reusability
+    for (let i = 0; i < slides.length; i++) {
+      dotsNav.innerHTML += '<button class="carousel__indicator"></button>';
+    }
+    const dots = Array.from(dotsNav.children);
+    dots[0].classList.add("current-slide");
+    const slideWidth = slides[0].getBoundingClientRect().width;
 
-//* Pushes as much navdots as there are slides in the carousel, for a better reusability
-for (let i = 0; i < slides.length; i++) {
-  dotsNav.innerHTML += '<button class="carousel__indicator"></button>';
-}
-const dots = Array.from(dotsNav.children);
-dots[0].classList.add("current-slide");
-const slideWidth = slides[0].getBoundingClientRect().width;
+    //* Arrange the slides next to one another
+    const setSlidePosition = (slide, index) => {
+      slide.style.left = slideWidth * index + "px";
+    };
+    slides.forEach(setSlidePosition);
 
-//* Arrange the slides next to one another
-const setSlidePosition = (slide, index) => {
-  slide.style.left = slideWidth * index + "px";
-};
-slides.forEach(setSlidePosition);
+    //* Move slide
+    const moveToSlide = (currentSlide, targetSlide, targetDot, targetIndex) => {
+      const currentDot = dotsNav.querySelector(".current-slide");
+      track.style.transform = "translateX(-" + targetSlide.style.left + ")";
+      currentSlide.classList.remove("current-slide");
+      targetSlide.classList.add("current-slide");
 
-//* Move slide
-const moveToSlide = (currentSlide, targetSlide, targetDot, targetIndex) => {
-  const currentDot = dotsNav.querySelector(".current-slide");
-  track.style.transform = "translateX(-" + targetSlide.style.left + ")";
-  currentSlide.classList.remove("current-slide");
-  targetSlide.classList.add("current-slide");
+      currentDot.classList.remove("current-slide");
+      targetDot.classList.add("current-slide");
+    };
 
-  currentDot.classList.remove("current-slide");
-  targetDot.classList.add("current-slide");
-};
+    //* When I click the nav indicators, move to that slide
+    dotsNav.addEventListener("click", (e) => {
+      const targetDot = e.target.closest("button");
 
-//* When I click the nav indicators, move to that slide
-dotsNav.addEventListener("click", (e) => {
-  const targetDot = e.target.closest("button");
+      if (!targetDot) return;
 
-  if (!targetDot) return;
+      const currentSlide = track.querySelector(".current-slide");
+      const targetIndex = dots.findIndex((dot) => dot === targetDot);
+      const targetSlide = slides[targetIndex];
 
-  const currentSlide = track.querySelector(".current-slide");
-  const targetIndex = dots.findIndex((dot) => dot === targetDot);
-  const targetSlide = slides[targetIndex];
+      moveToSlide(currentSlide, targetSlide, targetDot, targetIndex);
+    });
 
-  moveToSlide(currentSlide, targetSlide, targetDot, targetIndex);
-});
+    //* Carousel autoplay
+    const carouselAutoplay = () => {
+      for (let i = 0; i <= dots.length; i++) {
+        doSetTimeout(i);
+      }
+    };
+    carouselAutoplay();
 
-//* Carousel autoplay
-const carouselAutoplay = () => {
-  for (let i = 0; i <= dots.length; i++) {
-    doSetTimeout(i);
+    function doSetTimeout(i) {
+      setTimeout(function () {
+        if (i === dots.length) {
+          carouselAutoplay();
+        }
+        dots[i].click();
+      }, 5000 * i);
+    }
   }
 };
-carouselAutoplay();
-
-function doSetTimeout(i) {
-  setTimeout(function () {
-    if (i === dots.length) {
-      carouselAutoplay();
-    }
-    dots[i].click();
-  }, 5000 * i);
-}
+carouselSetup();
 
 //! ---------- NAVBAR ---------- !//
 
@@ -72,11 +78,13 @@ window.addEventListener("scroll", () => {
 });
 364;
 
+//! ---------- SCROll ARROWS ---------- !//
+
 //* Turns arrows 180deg once you've reached the bottom of the screen
 window.onscroll = function (ev) {
   if (
     window.innerHeight + Math.round(window.scrollY) >=
-    document.body.offsetHeight - 20
+    document.body.offsetHeight - 50
   ) {
     document.querySelector(".overflay svg").style.transform = "rotateZ(180deg)";
   } else if (
@@ -84,6 +92,12 @@ window.onscroll = function (ev) {
     window.innerHeight
   ) {
     document.querySelector(".overflay svg").style.transform = "rotateZ(0deg)";
+  } else if (
+    window.innerHeight + Math.round(window.scrollY) >
+    window.innerHeight + 50
+  ) {
+    document.querySelector(".overflay svg").style.transform =
+      "translateX(-48vw) scale(0.5)";
   }
 };
 
