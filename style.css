@@ -979,12 +979,12 @@ body.dark {
     position: fixed;
     z-index: 2;
     width: 100%;
+    transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
     > nav {
       padding-block: 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
       .logo {
         padding-left: 10px;
         display: flex;
