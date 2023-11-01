@@ -251,6 +251,10 @@ body {
           > p {
             font-weight: 600;
             font-style: calc(36.75px / var(--goldenRatio));
+            > a {
+              color: var(--secondary);
+              font-weight: 500;
+            }
           }
         }
       }
