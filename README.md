@@ -19,12 +19,12 @@ This library only uses HTML, CSS and JS.
 - Components are styled based on nesting, to keep a strict but robust layout. When using the components given with the library, you'll be sure to have a perfect render.
 - JS is used for various dynamic elements/functionnalities, like the dark/light theme, the carousel, and other animations based on scroll.
 
-## Flags :
+## Flags / TO DO :
 
-- [ ] Responsive
-- [ ] SEO optimisation
-- [ ] Licensing
-- [ ] Accessibility features
+- [&#10060;] Responsive
+- [&#10060;] SEO optimisation
+- [&#10060;] Licensing
+- [&#10060;] Accessibility features
 
 ## Quick start :
 
