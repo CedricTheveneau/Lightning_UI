@@ -88,6 +88,12 @@ window.onscroll = function (ev) {
   ) {
     document.querySelector(".overflay svg").style.transform = "rotateZ(180deg)";
   } else if (
+    window.innerHeight + Math.round(window.scrollY) <= window.innerHeight &&
+    document.querySelector(".carousel") == null
+  ) {
+    document.querySelector(".overflay svg").style.transform =
+      "translateX(-48vw) scale(0.5)";
+  } else if (
     window.innerHeight + Math.round(window.scrollY) <=
     window.innerHeight
   ) {
@@ -95,6 +101,22 @@ window.onscroll = function (ev) {
   } else if (
     window.innerHeight + Math.round(window.scrollY) >
     window.innerHeight + 50
+  ) {
+    document.querySelector(".overflay svg").style.transform =
+      "translateX(-48vw) scale(0.5)";
+  } else if (
+    window.innerHeight + Math.round(window.scrollY) >= window.innerHeight &&
+    document.querySelector(".carousel") == null
+  ) {
+    document.querySelector(".overflay svg").style.transform =
+      "translateX(-48vw) scale(0.5)";
+  }
+};
+
+window.onload = function (ev) {
+  if (
+    window.innerHeight + Math.round(window.scrollY) >= window.innerHeight &&
+    document.querySelector(".carousel") == null
   ) {
     document.querySelector(".overflay svg").style.transform =
       "translateX(-48vw) scale(0.5)";
@@ -136,3 +158,21 @@ document.addEventListener(
   },
   false
 );
+
+//! ---------- REDIRECTION TO QUICKSTART PAGE AFTER DOWNLOAD OF LIBRARY ---------- !//
+
+const DLBtns = document.querySelectorAll("a[download]");
+DLBtns.forEach((e) => {
+  e.addEventListener("click", () => {
+    location.href = "../pages/quickStart.html";
+  });
+});
+
+//! ---------- DYNAMICALLY ADD BLOG BILLS TO THE NEWS PAGE ---------- !//
+
+const billContainer = document.querySelector(".blogBillCollection");
+if (billContainer !== null) {
+  billData.forEach((e) => {
+    billContainer.innerHTML += `<div class='blogBill'><img src='${e.img}' alt='Thumbnail'><details><summary><p>${e.title}</p>${e.summary}<div class='tags'>${e.tags}</div></summary>${e.content}</details></div>`;
+  });
+}

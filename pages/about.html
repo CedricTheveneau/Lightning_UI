@@ -11,6 +11,16 @@
 </head>
 
 <body>
+    <div class="overflay">
+        <a href="#">
+            <svg class="scrollArrows" width="54" height="64" viewBox="0 0 54 64" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 43.7L27.5 60.2L44 43.7" stroke="#03001F" stroke-width="4" stroke-linecap="round" />
+                <path d="M6 23.45L26.625 44.075L47.25 23.45" stroke="#03001F" stroke-width="4" stroke-linecap="round" />
+                <path d="M2 2.94995L26.75 27.7L51.5 2.94995" stroke="#03001F" stroke-width="4" stroke-linecap="round" />
+            </svg>
+        </a>
+    </div>
     <header>
         <nav>
             <div class="logo">
@@ -73,11 +83,11 @@
                     <span class="navbarSeparator">|</span>
                     <li><a href="about.html" class="link active">About</a></li>
                     <span class="navbarSeparator">|</span>
-                    <li><a href="usage.html" class="link">Usage</a></li>
+                    <li><a href="legals.html" class="link">Legals</a></li>
                     <span class="navbarSeparator">|</span>
                     <li><a href="contact.html" class="link">Contact</a></li>
                     <span class="navbarSeparator">|</span>
-                    <li><button class="navCTA"><a href="../library.zip" download="Lightning_UI_Library"
+                    <li><button class="navCTA"><a href="../Lightning_UI.zip" download="Lightning_UI_Library"
                                 class="link">Download library</a></button> </li>
                 </ul>
             </div>
@@ -86,44 +96,50 @@
     <main>
         <div class="content higher">
             <h2 class="accent centered">Everything there is to know about Lightning UI</h2>
-            <h3>It's an honor to have you here</h3>
-            <p>Here's some quick info regarding Lightning UI.</p>
-            <p>I started working on Lightning UI back in <span>September of 2023</span>, as part of my
-                <span>graduation project</span>, as a
-                <span>Full-Stack dev</span>. I had a pretty incredible concept I wanted to give birth to, the issue
-                was : I have way
-                too many ideas and I want to try out as much things as I can in a single project.
+            <br />
+            <h3>Creation</h3>
+            <p>Lightning UI's developpement started back in <span>September of 2023</span>, as part of my
+                <span>graduation project</span>, as a <span>Full-Stack dev</span>.
             </p>
-            <p><span>This big project was kind of a crash course for me, I learnt a lot, made lots and lots of
-                    mistakes, but
-                    in the end, I'm truly glad that I didn't give up and kept pushing.</span> It gave me the
-                opportunity to gain a
-                lot of <span>practice on things that revolve around coding but aren't immediate stuff we think about
-                    when
-                    dvelopping an app</span>.</p>
-            <p>One example of those multiple things is Lightning UI : <span>I've always wanted to create my own
-                    library</span> (since
-                then I've had ideas for several other ones), and upon working countless hours on it, it really felt
-                exceptionnal. I <span>gained a lot of time during the developpement process</span> of this big project
-                thanks to that
-                library. <span>All the blocks were pretty much ready, I didn't have to think about styling, I'd knew
+            <p><span>I've always wanted to create my own library</span>, and as this full-stack project was really big,
+                I needed to find ways to gain some time on integration, to be able to focus on functionnalities instead.
+                (actually it ws an excuse to discover the wonderful world of libraries and give it a shot while
+                impressing the jury, shhh).</p>
+            <p>I spent a of time working on it, but it was well worth it, as I started working on the actual project,
+                <span>All the blocks were pretty much ready, I didn't have to think about styling, I'd knew
                     everything would work out well and look awesome immediatly</span> (or would it ? *insert VSauce
                 theme*). I'd
                 <span>only have to focus on actually developping</span>, making sure all the data were displayed, all
-                the features
-                would work perfectly.
+                the features would work perfectly.
             </p>
-            <p>It took me quite some time to put together this library, and it's far from perfect, because it was my
-                first one, and I'll probably be far more efficient on all the following ones. But <span>I learnt
-                    something,
-                    and that was the most important part</span>.</p>
-            <br />
-            <p><span>Now, back to you : I hope this library will be useful for you, and that you'll create amazing
-                    things with
-                    it.</span> It's not complete at all, I have very basic features in it at the moment, but who knows ?
-                Maybe
-                someday I'll turn it into a proper full fledged library with everything we could imagine needing ?</p>
-            <p>That's not my priority so far, I still have a lot to do to complete my graduation project.</p>
+            <h3>Build</h3>
+            <p>This library was meant to be as customizable as possible. While being simple and easy to use as a
+                beginner looking for its first library.</p>
+            <p>Hence why its built with CSS (and JS for some more advanced features like carousels, scroll based
+                animations, theme selection, etc.). You'll have to do a quick dive into CSS variables to be able to
+                customize it fully, but it'll be easy, don't worry ! And as I'm feeling generous, <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">here's a really
+                    useful link</a> to learn quickly about them.</p>
+            <p>It's built using nesting, so if you want everything to look right, please use the structure provided in
+                the <a href="components.html">Components</a> section. - Please note that when downloading the Library,
+                you'll have the components blocs in the folder as well.</p>
+            <p>Though, you can always try to un-nest the CSS and rework it to your needs. Same goes for the HTML blocks,
+                feel fre to remodel them as you wish, if you have specific needs.</p>
+            <h3>Why to use Lightning UI ?</h3>
+            <p>To put it simply : It's highly customizable, extendable, based on an easy to learn language, lightweight
+                and impactful. - Yes, the flashy colors are voluntary, as well as the angular design and massive
+                font-sizes.</p>
+            <p>Of course it's also responsive and I plan on making it accessible (usable by people with various
+                disabilities) in the future.</p>
+            <h3>Final words</h3>
+            <p><span>I hope this library will be useful for you, and that you'll create amazing things with it.</span> -
+                Please, <a href="contact.html">send me what you build with it</a>, I really want to see how it
+                helps/inspires you to be
+                creative !
+            </p>
+            <p>
+                It's not complete at all, I have very basic features in it at the moment, but who knows ? Maybe someday
+                I'll turn it into a proper full fledged library with everything we could imagine needing ?</p>
             <p><span>But for now, please enjoy this first version of Lightning UI.</span></p>
             <br />
             <p>Thank you again for your interest in this project,<br />
@@ -131,48 +147,13 @@
             </p>
             <br /><br />
             <p><span>Cédric, creator of Lightning UI</span></p>
-        </div>
-        <div class="content">
-            <div class="twoBlocs">
-                <img src="../assets/image-removebg-preview.png" alt="Runner">
-                <div class="info">
-                    <h2>Create awesome blocs</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptas blanditiis esse natus.
-                        Quia
-                        cumque reprehenderit saepe minus aliquid voluptas explicabo soluta voluptate voluptates, ipsa
-                        amet
-                        ea dolorum laudantium consectetur recusandae iure <a href="/">eligendi blanditiis</a>, velit
-                        incidunt quam
-                        dignissimos! Praesentium, odit!</p>
-                    <button><a href="">My awesome CTA <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
-                                    fill="#DEFF0A" />
-                            </svg> </a></button>
-                </div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="twoBlocs reversed">
-                <img src="../assets/image-removebg-preview.png" alt="Runner">
-                <div class="info">
-                    <h2>Of course you can reverse them</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptas blanditiis esse natus.
-                        Quia
-                        cumque reprehenderit saepe minus aliquid voluptas explicabo soluta voluptate voluptates, ipsa
-                        amet
-                        ea dolorum laudantium consectetur recusandae iure <a href="/">eligendi blanditiis</a>, velit
-                        incidunt quam
-                        dignissimos! Praesentium, odit!</p>
-                    <button><a href="">My awesome CTA <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
-                                    fill="#DEFF0A" />
-                            </svg> </a></button>
-                </div>
-            </div>
+            <button class="centered"><a href="../Lightning_UI.zip" download="Lightning_UI_Library">Download Lightning UI
+                    <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
+                            fill="#DEFF0A" />
+                    </svg> </a></button>
         </div>
     </main>
     <footer>
@@ -214,13 +195,11 @@
                         </a>
                     </li>
                     <span class="navbarSeparator">|</span>
-                    <li><a href="contact.html" class="link">Contact</a></li>
-                    <span class="navbarSeparator">|</span>
                     <li><a href="about.html" class="link">About</a></li>
                     <span class="navbarSeparator">|</span>
-                    <li><a href="usage.html" class="link">Usage</a></li>
-                    <span class="navbarSeparator">|</span>
                     <li><a href="legals.html" class="link">Legals</a></li>
+                    <span class="navbarSeparator">|</span>
+                    <li><a href="contact.html" class="link">Contact</a></li>
                 </ul>
             </div>
         </nav>

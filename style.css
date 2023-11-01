@@ -528,6 +528,69 @@ body {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      & .blogBillCollection {
+        display: grid;
+        gap: 20px;
+      }
+      & .blogBill {
+        width: 100%;
+        background-color: var(--accentLight);
+        border-radius: 25px;
+        color: var(--secondary);
+        padding: 20px;
+        display: grid;
+        justify-items: center;
+        gap: 15px;
+        grid-template-columns: 1fr 3fr;
+        > img {
+          max-width: 200px;
+          aspect-ratio: 1;
+          border-radius: 10px;
+          align-self: baseline;
+        }
+        > details {
+          width: 100%;
+          > summary {
+            cursor: pointer;
+            list-style: none;
+            display: grid;
+            gap: 20px;
+            > p:nth-child(1) {
+              font-weight: var(--h1Weight);
+              font-size: var(--h2Size);
+              font-family: var(--montserrat);
+              font-style: italic;
+            }
+            > .tags {
+              display: flex;
+              gap: 10px;
+              > .tag {
+                padding: 5px 10px;
+                border-radius: 50px;
+                font-weight: var(--h3Weight);
+              }
+              > .tag.release {
+                background-color: var(--primary);
+              }
+              > .tag.feature {
+                background-color: var(--accentDark);
+                color: var(--accentLight);
+              }
+            }
+          }
+          > :nth-child(2) {
+            padding-top: 20px;
+          }
+          > :last-child {
+            font-weight: var(--h1Weight);
+            font-style: italic;
+            font-size: calc(var(--h3Size) - 4px);
+          }
+        }
+      }
+      & ul {
+        padding: 0 0 0 25px;
+      }
       & p {
         > a {
           color: var(--accentDark);
@@ -554,6 +617,7 @@ body {
       }
       > .twoBlocs {
         display: grid;
+        gap: 20px;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         justify-items: center;
@@ -647,6 +711,79 @@ body {
         justify-items: center;
         > .info {
           order: -1;
+        }
+      }
+      > button {
+        width: fit-content;
+        /* transform: translateX(30px); */
+        padding: 5px;
+        border: transparent;
+        background-color: transparent;
+        font-size: calc(var(--h2Size) * 0.7);
+        font-weight: var(--h3Weight);
+        > a {
+          color: var(--secondary);
+          font-weight: var(--h3Weight);
+          font-style: italic;
+          position: relative;
+          transition: color 250ms 250ms ease-in-out;
+          > svg {
+            > path {
+              fill: var(--secondary);
+              scale: 0.7;
+              transform: translateY(35%) translateX(25%);
+              transition: fill 250ms 250ms ease-in-out;
+            }
+          }
+        }
+        > a:hover,
+        a:active,
+        a path {
+          color: var(--primary);
+          & path {
+            fill: var(--primary);
+          }
+        }
+        > a::after {
+          content: "";
+          left: -5%;
+          top: -20%;
+          width: 110%;
+          height: 150%;
+          transform: skew(calc(var(--skew) * -1));
+          position: absolute;
+          border: 3px solid var(--secondary);
+          background-color: var(--primary);
+          scale: 1;
+          transition: background-color 250ms 250ms ease-in-out;
+          z-index: -1;
+        }
+        > a:hover::after,
+        a:active::after {
+          background-color: var(--secondary);
+        }
+        > a::before {
+          content: "";
+          left: 0%;
+          top: 0%;
+          width: 110%;
+          height: 150%;
+          transform: skew(calc(var(--skew) * -1));
+          position: absolute;
+          border: 3px solid var(--secondary);
+          background-color: var(--secondary);
+          scale: 1;
+          transition: top 250ms ease-in-out, left 250ms ease-in-out,
+            width 250ms ease-in-out;
+          z-index: -1;
+        }
+        > a:hover::before,
+        a:active::before {
+          left: -5%;
+          top: -20%;
+          width: 100%;
+          transition: top 250ms ease-in-out, left 250ms ease-in-out,
+            width 250ms ease-in-out;
         }
       }
     }
