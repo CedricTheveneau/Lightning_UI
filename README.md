@@ -1,5 +1,32 @@
-# Lightning_UI
+# Lightning_UI - The beginner friendly CSS library
+
 Lightning UI is a CSS library I made to simplify the styling on a cross platform project. The goal is to have a defined style everywhere that will save me both time and style consistency issues to fix.
 
-To use the stylesheet anywhere, just enter this link : https://cedrictheveneau.github.io/Lightning_UI/style.css into your CSS call tag in the head of your document.
-To use the carousel, reversing scroll arrows, themed navbar on scroll and dark/light mode function, you'll also need to add this JS file to the project : https://cedrictheveneau.github.io/Lightning_UI/script.js
+## Description :
+
+Lightning UI is a simple yet eye-catching front-end library of ready to use components.
+This library was built from the ground up, with an heavy focus on being highly customizable, yet solid in its conception.
+Within minutes, you can give your website an impressive look, that will catch the eye of those who will see it, without struggling for hours to figure how things work. It just works.
+
+I used beginner friendly technologies because I wanted everyone to be able to use it. You don't even need to use the command line to access it, just go on [the website](https://cedrictheveneau.github.io/Lightning_UI/) and click on "Download library", the library will be saved as a zip file with everything to start up, and you'l even be redirected towards the [quick start page](https://cedrictheveneau.github.io/Lightning_UI/pages/quickStart.html), guiding you through the startup.
+
+It was quite the challenge for me, as it was my very first library, but I learnt a lot of things, and there are still things to learn and improve in the code. I'll be focusing on that next.
+
+## Languages used :
+
+This library only uses HTML, CSS and JS.
+
+- Components are styled based on nesting, to keep a strict but robust layout. When using the components given with the library, you'll be sure to have a perfect render.
+- JS is used for various dynamic elements/functionnalities, like the dark/light theme, the carousel, and other animations based on scroll.
+
+## Quick start :
+
+You don't even need to use the command line to grab a copy of Lightning UI, just go on [the website](https://cedrictheveneau.github.io/Lightning_UI/) and click on "Download library", the library will be saved as a zip file with everything to start up, and you'l even be redirected towards the [quick start page](https://cedrictheveneau.github.io/Lightning_UI/pages/quickStart.html), guiding you through the startup. As simple as that.
+
+## Credits :
+
+I've worked alone on this project, if you have request, question, suggestion, feedback, feel free to contact me using the [Contact page](https://cedrictheveneau.github.io/Lightning_UI/pages/contact.html). I've written every single line of code from this project. Everything there is to know about this project is written in the [About](https://cedrictheveneau.github.io/Lightning_UI/pages/about.html) and [Legals](https://cedrictheveneau.github.io/Lightning_UI/pages/legals.html) pages. But you can always ask me directly if needed.
+
+## License :
+
+For now, I'm doing some research regarding the right licence to pick for the project, I'll update the repository with the right info once this will be settled.
