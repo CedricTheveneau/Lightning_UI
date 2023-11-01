@@ -602,7 +602,8 @@ body {
       & ul {
         padding: 0 0 0 25px;
       }
-      & p {
+      & p,
+      ul > li {
         > a {
           color: var(--accentDark);
           position: relative;
@@ -1429,6 +1430,10 @@ svg.darkModeToggleSVG.toggle {
   animation: carouselMarkerLoad 5000ms forwards;
 }
 
+.carousel__slide > svg {
+  animation: carouselBgPan 60000ms infinite alternate-reverse linear;
+}
+
 /** Carousel markers animation **/
 @keyframes carouselMarkerLoad {
   0% {
@@ -1446,6 +1451,15 @@ svg.darkModeToggleSVG.toggle {
   100% {
     transform-origin: bottom center;
     transform: scaleY(0);
+  }
+}
+
+@keyframes carouselBgPan {
+  0% {
+    left: 40%;
+  }
+  100% {
+    left: -20%;
   }
 }
 
