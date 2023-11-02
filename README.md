@@ -21,9 +21,8 @@ This library only uses HTML, CSS and JS.
 
 ## Flags / TO DO :
 
-- [&#10060;] Responsive
+- [&#10060;] Responsive (Work in progress)
 - [&#10060;] SEO optimisation
-- [&#10060;] Licensing
 - [&#10060;] Accessibility features
 
 ## Quick start :
@@ -36,4 +35,8 @@ I've worked alone on this project, if you have any request, question, suggestion
 
 ## License :
 
-Lightning UI uses an [MIT License](./LICENSE.md), which means you can pretty much do anything with it, as long as you keep the original LICENSE.md and NOTICE.md files into your project which uses this library.
+Lightning UI uses an [MIT License](./LICENSE.md), which means you can pretty much do anything with it, as long as you keep the original LICENSE.md and NOTICE.md files into your project which uses this library and respect the terms of use mentionned in them.
+
+## Notice :
+
+When using Lightning UI, you need to keep in your project both the LICENSE.md and NOTICE.md files that were given with the library. I recommend updating the NOTICE.md file when you use the library, it's a good practice to keep track of what is used in your project. For example, if you build a React app, you can add it to the NOTICDE.md file, above the "Lightning UI" section heading.
