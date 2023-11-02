@@ -36,4 +36,4 @@ I've worked alone on this project, if you have any request, question, suggestion
 
 ## License :
 
-For now, I'm doing some research regarding the right licence to pick for the project, I'll update the repository with the right info once this will be settled.
+Lightning UI uses an [MIT License](./LICENSE.md), which means you can pretty much do anything with it, as long as you keep the original LICENSE.md and NOTICE.md files into your project which uses this library.
