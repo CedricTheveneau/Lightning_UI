@@ -911,6 +911,9 @@ body {
     > .content:not(:first-child) {
       padding: 0px 100px 50px 100px;
     }
+    > .carousel + .content:not(:first-child) {
+      padding: 100px 100px 50px 100px;
+    }
     > .content.fit {
       height: fit-content;
     }
@@ -1795,11 +1798,77 @@ a:hover > svg.ctaArrow.pulse {
 }
 
 @media screen and (max-width: 1000px) {
+  @keyframes ctaArrowWiggle {
+    0%,
+    100% {
+      transform: scale(0.6) translateX(0) translateY(50%);
+    }
+    50% {
+      transform: scale(0.6) translateX(5%) translateY(50%);
+    }
+  }
+
+  @keyframes ctaArrowFlash {
+    0% {
+      transform-origin: left center;
+      transform: scale(0.6) scaleX(0) translateY(50%);
+    }
+    25% {
+      transform-origin: left center;
+      transform: scale(0.6) scaleX(1) translateY(50%);
+    }
+    75% {
+      transform-origin: right center;
+      transform: scale(0.6) scaleX(1) translateY(50%);
+    }
+    100% {
+      transform-origin: right center;
+      transform: scale(0.6) scaleX(0) translateY(50%);
+    }
+  }
+
+  @keyframes ctaArrowPulse {
+    0% {
+      transform-origin: left center;
+      transform: scale(0.6) translateX(0%) scaleX(0) translateY(50%);
+      opacity: 0;
+    }
+    25% {
+      transform-origin: left center;
+      transform: scale(0.6) translateX(20%) scaleX(1) translateY(50%);
+      opacity: 1;
+    }
+    75% {
+      transform-origin: right center;
+      transform: scale(0.6) translateX(20%) scaleX(1) translateY(50%);
+      opacity: 1;
+    }
+    100% {
+      transform-origin: right center;
+      transform: scale(0.6) translateX(50%) scaleX(0) translateY(50%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes carouselEntryRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-20%);
+      opacity: 1;
+    }
+  }
+
   :root {
-    --heroSize: 95.95px;
+    --heroSize: 42.75px;
     --heroWeight: var(--h1Weight);
-    --heroLineHeight: 90px;
-    --heroOutline: 4px;
+    --heroLineHeight: 45px;
+    --heroOutline: 3px;
     --h1Size: 26.42px;
     --h1Weight: 900;
     --h1Outline: 4px;
@@ -1811,6 +1880,10 @@ a:hover > svg.ctaArrow.pulse {
     --h3Outline: 0.8px;
     --textWeight: 500;
     --textLineHeight: 25px;
+  }
+  header:has(.navbar.active) {
+    background-color: var(--primary) !important;
+    transition: background-color 0ms ease-in-out !important;
   }
   header .logo {
     z-index: 2;
@@ -1860,6 +1933,75 @@ a:hover > svg.ctaArrow.pulse {
   }
   main {
     z-index: 5;
+  }
+  .carousel {
+    height: 100dvh;
+    width: 100%;
+    overflow-y: hidden;
+    position: relative;
+    > .carousel__track-container {
+      > .carousel__track {
+        > .carousel__slide {
+          > .hero {
+            width: 50%;
+            transform: translateX(30px) !important;
+            > p {
+              margin-bottom: 10px !important;
+            }
+          }
+        }
+        > .carousel__slide.reversed {
+          > svg {
+            left: -20%;
+          }
+          > .hero {
+            transform: translateX(-45px) !important;
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            > h2 {
+              text-align: right;
+            }
+            > p {
+              text-align: right;
+            }
+          }
+        }
+        > .carousel__slide.current-slide {
+          z-index: 1;
+          background-color: var(--primary);
+        }
+      }
+    }
+    > .carousel__nav {
+      position: absolute;
+      z-index: 2;
+      right: 10px;
+      bottom: 10px;
+      display: grid;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 5px;
+      > .carousel__indicator {
+        border: transparent;
+        background-color: var(--secondary50);
+        width: 8px;
+        aspect-ratio: 1 / 5;
+        transform: skewY(25deg);
+        position: relative;
+        transition: opacity 250ms ease-in-out;
+      }
+      > .carousel__indicator.current-slide::after {
+        content: "";
+        background-color: var(--accentDark);
+        inset: 0;
+        width: 100%;
+        transform: scaleY(0);
+        position: absolute;
+        animation: carouselMarkerLoad 5000ms forwards;
+      }
+    }
   }
   .accent::after,
   .accent::before {
