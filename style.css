@@ -58,7 +58,7 @@ button {
   display: none;
 }
 .centered {
-  margin: auto;
+  margin: 0 auto;
 }
 .alignRight {
   align-self: flex-end;
@@ -746,7 +746,7 @@ body {
           order: -1;
         }
       }
-      > .gridblocs {
+      > .gridBlocs {
         display: grid;
         gap: 40px;
         grid-template-columns: repeat(2, 1fr);
@@ -2009,6 +2009,9 @@ a:hover > svg.ctaArrow.pulse {
   .content {
     padding: 100px 20px 20px 20px !important;
   }
+  .content.fit-mobile {
+    height: fit-content;
+  }
   .content > br:not(h2 + br) {
     display: none;
   }
@@ -2029,7 +2032,7 @@ a:hover > svg.ctaArrow.pulse {
       gap: 20px !important;
     }
   }
-  .gridblocs {
+  .gridBlocs {
     grid-template-columns: unset !important;
     justify-items: left !important;
     padding-block: 0px 50px !important;
