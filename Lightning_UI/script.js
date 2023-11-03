@@ -172,7 +172,11 @@ document.addEventListener(
 const DLBtns = document.querySelectorAll("a[download]");
 DLBtns.forEach((e) => {
   e.addEventListener("click", () => {
-    location.href = "./pages/quickStart.html";
+    if (window.location.href.includes("/pages/")) {
+      location.href = "quickStart.html";
+    } else {
+      location.href = "pages/quickStart.html";
+    }
   });
 });
 
