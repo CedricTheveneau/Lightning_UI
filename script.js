@@ -66,6 +66,14 @@ const carouselSetup = () => {
 };
 carouselSetup();
 
+//** Removes the reversed class to every slide on mobile devices **/
+const toRemove = document.querySelectorAll(".carousel__slide.reversed");
+if (window.innerWidth < 650) {
+  toRemove.forEach((e) => {
+    e.classList.remove("reversed");
+  });
+}
+
 //! ---------- NAVBAR ---------- !//
 
 //* Changes the navbar bg on scroll

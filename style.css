@@ -1876,6 +1876,20 @@ a:hover > svg.ctaArrow.pulse {
     }
   }
 
+  @keyframes carouselEntryRightAlt {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
   :root {
     --heroSize: 42.75px;
     --heroWeight: var(--h1Weight);
@@ -1892,6 +1906,9 @@ a:hover > svg.ctaArrow.pulse {
     --h3Outline: 0.8px;
     --textWeight: 500;
     --textLineHeight: 25px;
+  }
+  .overflay {
+    display: none;
   }
   header:has(.navbar.active) {
     background-color: var(--primary) !important;
@@ -1950,13 +1967,16 @@ a:hover > svg.ctaArrow.pulse {
     z-index: 5;
   }
   .carousel {
-    height: 100dvh;
+    height: 40dvh !important;
     width: 100%;
     overflow-y: hidden;
     position: relative;
     > .carousel__track-container {
       > .carousel__track {
         > .carousel__slide {
+          > svg {
+            animation: unset !important;
+          }
           > .hero {
             width: 50%;
             transform: translateX(30px) !important;
@@ -2030,6 +2050,9 @@ a:hover > svg.ctaArrow.pulse {
   .content:not(:first-child) {
     padding: 20px 20px 0px 20px !important;
   }
+  .content:last-child {
+    padding: 20px !important;
+  }
   .carousel + .content:not(:first-child) {
     padding: 100px 100px 50px 100px;
   }
@@ -2061,6 +2084,69 @@ a:hover > svg.ctaArrow.pulse {
 }
 
 @media screen and (max-width: 650px) {
+  :root {
+    --heroSize: 34.58px;
+    --heroWeight: var(--h1Weight);
+    --heroLineHeight: 45px;
+    --heroOutline: 3px;
+    --h1Size: 26.42px;
+    --h1Weight: 900;
+    --h1Outline: 4px;
+    --h2Size: 21.38px;
+    --h2Weight: 800;
+    --h2Outline: 2px;
+    --h3Size: 17.3px;
+    --h3Weight: 700;
+    --h3Outline: 0.8px;
+    --textWeight: 500;
+    --textLineHeight: 25px;
+  }
+  .carousel {
+    height: 100dvh !important;
+    width: 100%;
+    overflow-y: hidden;
+    position: relative;
+    > .carousel__track-container {
+      > .carousel__track {
+        > .carousel__slide {
+          flex-direction: column;
+          gap: 20px !important;
+          justify-content: center !important;
+          > .hero {
+            width: 90% !important;
+            margin: 0px auto;
+            transform: translateX(0) !important;
+          }
+          > img {
+            width: 90% !important;
+            height: unset !important;
+            aspect-ratio: 1;
+            margin: 0 auto;
+          }
+        }
+        > .carousel__slide.reversed {
+          flex-direction: column;
+          gap: 20px !important;
+          justify-content: center !important;
+          > svg {
+          }
+          > .hero {
+            margin: 0px auto;
+            transform: translateX(0) !important;
+          }
+          > img {
+            order: 2 !important;
+            margin: 0px auto;
+          }
+        }
+      }
+    }
+  }
+
+  .carousel__slide.current-slide > img {
+    animation: carouselEntryRightAlt 500ms 150ms forwards;
+  }
+
   footer > nav {
     flex-direction: column;
     gap: 25px;
