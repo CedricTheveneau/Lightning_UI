@@ -1518,7 +1518,6 @@ body.dark {
       }
     }
     > .content {
-      height: 100dvh;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -2130,9 +2129,6 @@ a:hover > svg.ctaArrow.pulse {
       }
     }
   }
-  .content {
-    padding: 100px 20px 20px 20px !important;
-  }
   .content.fit-mobile {
     height: fit-content;
   }
@@ -2148,16 +2144,29 @@ a:hover > svg.ctaArrow.pulse {
   .carousel + .content:not(:first-child) {
     padding: 100px 100px 50px 100px;
   }
+  .content,
+  .content:first-child {
+    padding: 100px 20px 20px 20px !important;
+  }
   .accent::after,
   .accent::before {
     display: none;
   }
   .twoBlocs {
     grid-template-columns: unset !important;
-    gap: 100px !important;
+    gap: 20px !important;
+    padding-bottom: 50px;
+    > img {
+      max-width: 50vw !important;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
     > .info {
       gap: 20px !important;
     }
+  }
+  .twoBlocs:last-child {
+    padding-bottom: 0px;
   }
   .gridBlocs {
     grid-template-columns: unset !important;
@@ -2213,6 +2222,7 @@ a:hover > svg.ctaArrow.pulse {
             transform: translateX(0) !important;
           }
           > img {
+            max-width: 90vw !important;
             width: 90% !important;
             height: unset !important;
             aspect-ratio: 1;
