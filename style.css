@@ -1888,6 +1888,9 @@ a:hover > svg.ctaArrow.pulse {
   header .logo {
     z-index: 2;
   }
+  footer .logo {
+    padding-left: 0px !important;
+  }
   header nav {
     position: relative;
   }
@@ -2003,9 +2006,21 @@ a:hover > svg.ctaArrow.pulse {
       }
     }
   }
+  .content {
+    padding: 100px 20px 20px 20px !important;
+  }
+  .content > br:not(h2 + br) {
+    display: none;
+  }
+  .content:not(:first-child) {
+    padding: 20px 20px 0px 20px !important;
+  }
+  .carousel + .content:not(:first-child) {
+    padding: 100px 100px 50px 100px;
+  }
   .accent::after,
   .accent::before {
-    scale: 0.9;
+    display: none;
   }
   .twoBlocs {
     grid-template-columns: unset !important;
