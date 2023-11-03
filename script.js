@@ -172,7 +172,7 @@ document.addEventListener(
 const DLBtns = document.querySelectorAll("a[download]");
 DLBtns.forEach((e) => {
   e.addEventListener("click", () => {
-    location.href = "./pages/quickStart.html";
+    location.href = "../Lightning_UI/pages/quickStart.html";
   });
 });
 
