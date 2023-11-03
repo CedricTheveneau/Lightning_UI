@@ -553,6 +553,18 @@ body {
         display: grid;
         gap: 20px;
       }
+      /* & .blogBillCollection.grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        > .blogBill {
+          grid-template-columns: unset;
+          align-content: baseline;
+        }
+        > .blogBill:has(details[open]) ~ .blogBill:has(details:not([open])) {
+          height: fit-content;
+        }
+      } */
       & .blogBill {
         width: 100%;
         background-color: var(--accentLight10);
@@ -2038,6 +2050,12 @@ a:hover > svg.ctaArrow.pulse {
     padding-block: 0px 50px !important;
     > .info {
       gap: 20px !important;
+    }
+  }
+  .blogBill {
+    grid-template-columns: unset !important;
+    & .tags {
+      flex-wrap: wrap;
     }
   }
 }
