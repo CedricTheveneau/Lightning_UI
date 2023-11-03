@@ -6,7 +6,7 @@ const billData = [
     date: "<p>-&nbsp;&nbsp; November 1, 2023</p>",
     content:
       "<p>My first sentence goes here</p><p>And here's a second one !</p><p>And so on...</p><br/><p>My name, my job</p>",
-    img: "../assets/image-removebg-preview.png",
+    img: "./assets/image-removebg-preview.png",
   },
   {
     title: "My title",
@@ -15,6 +15,6 @@ const billData = [
     date: "<p>-&nbsp;&nbsp; November 1, 2023</p>",
     content:
       "<p>My first sentence goes here</p><p>And here's a second one !</p><p>And so on...</p><br/><p>My name, my job</p>",
-    img: "../assets/image-removebg-preview.png",
+    img: "./assets/image-removebg-preview.png",
   },
 ];
