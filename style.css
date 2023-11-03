@@ -1429,7 +1429,6 @@ body.dark {
     }
     > .content {
       height: 100dvh;
-      padding: 100px;
       display: flex;
       flex-direction: column;
       gap: 20px;
