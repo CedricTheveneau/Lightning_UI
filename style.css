@@ -1910,6 +1910,9 @@ a:hover > svg.ctaArrow.pulse {
   .overflay {
     display: none;
   }
+  .socials {
+    display: none !important;
+  }
   header:has(.navbar.active) {
     background-color: var(--primary) !important;
     transition: background-color 0ms ease-in-out !important;
@@ -2100,6 +2103,9 @@ a:hover > svg.ctaArrow.pulse {
     --h3Outline: 0.8px;
     --textWeight: 500;
     --textLineHeight: 25px;
+  }
+  .socials {
+    display: block !important;
   }
   .carousel {
     height: 100dvh !important;
