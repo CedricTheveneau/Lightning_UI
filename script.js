@@ -52,7 +52,9 @@ const carouselSetup = () => {
         doSetTimeout(i);
       }
     };
-    carouselAutoplay();
+    if (document.querySelector(".carousel").classList.contains("autoplay")) {
+      carouselAutoplay();
+    }
 
     function doSetTimeout(i) {
       setTimeout(function () {
@@ -180,12 +182,12 @@ DLBtns.forEach((e) => {
   });
 });
 
-//! ---------- DYNAMICALLY ADD BLOG BILLS TO THE NEWS PAGE ---------- !//
+//! ---------- DYNAMICALLY ADD BLOG POSTS TO THE NEWS PAGE ---------- !//
 
-const billContainer = document.querySelector(".blogBillCollection");
-if (billContainer !== null) {
-  billData.forEach((e) => {
-    billContainer.innerHTML += `<div class='blogBill'><img src='${e.img}' alt='Thumbnail'><details><summary><p>${e.title}</p>${e.summary}<div class='tags'>${e.tags} ${e.date}</div></summary>${e.content}</details></div>`;
+const blogContainer = document.querySelector(".blogPostCollection");
+if (blogContainer !== null) {
+  blogData.forEach((e) => {
+    blogContainer.innerHTML += `<div class='blogPost'><img src='${e.img}' alt='Thumbnail'><details><summary><p>${e.title}</p>${e.summary}<div class='tags'>${e.tags} ${e.date}</div></summary>${e.content}</details></div>`;
   });
 }
 

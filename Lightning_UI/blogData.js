@@ -1,4 +1,4 @@
-const billData = [
+const blogData = [
   {
     title: "My other title",
     summary: "<p>My summary.</p>",

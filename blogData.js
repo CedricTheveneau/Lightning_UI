@@ -1,4 +1,4 @@
-const billData = [
+const blogData = [
   {
     title: "V1.0 - Macroburst",
     summary:
