@@ -542,6 +542,13 @@ body {
         }
       }
     }
+    > .carousel:not(.autoplay) {
+      > .carousel__nav {
+        > .carousel__indicator.current-slide::after {
+          animation: carouselMarkerLoaded 500ms forwards;
+        }
+      }
+    }
     > .content {
       scroll-snap-type: mandatory;
       scroll-snap-align: start;
@@ -550,23 +557,23 @@ body {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      & .blogBillCollection {
+      & .blogPostCollection {
         display: grid;
         gap: 20px;
       }
-      /* & .blogBillCollection.grid {
+      /* & .blogPostCollection.grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        > .blogBill {
+        > .blogPost {
           grid-template-columns: unset;
           align-content: baseline;
         }
-        > .blogBill:has(details[open]) ~ .blogBill:has(details:not([open])) {
+        > .blogPost:has(details[open]) ~ .blogPost:has(details:not([open])) {
           height: fit-content;
         }
       } */
-      & .blogBill {
+      & .blogPost {
         width: 100%;
         background-color: var(--accentLight10);
         border-radius: 25px;
@@ -628,8 +635,8 @@ body {
           }
         }
       }
-      & .blogBill:hover,
-      .blogBill:focus-within {
+      & .blogPost:hover,
+      .blogPost:focus-within {
         background-color: var(--accentLight);
       }
       & ul {
@@ -936,7 +943,7 @@ body {
           }
         }
       }
-      > button {
+      > button:not(.simpler) {
         width: fit-content;
         /* transform: translateX(30px); */
         padding: 5px;
@@ -1007,6 +1014,59 @@ body {
           width: 100%;
           transition: top 250ms ease-in-out, left 250ms ease-in-out,
             width 250ms ease-in-out;
+        }
+      }
+      > button.simpler {
+        width: fit-content;
+        /* transform: translateX(30px); */
+        padding: 5px;
+        border: transparent;
+        background-color: transparent;
+        font-size: calc(var(--h2Size) * 0.7);
+        font-weight: var(--h3Weight);
+        > a {
+          color: var(--primary);
+          font-weight: var(--h3Weight);
+          font-style: italic;
+          position: relative;
+          transition: color 250ms ease-in-out;
+          > svg {
+            > path {
+              fill: var(--primary);
+              scale: 0.7;
+              transform: translateY(35%) translateX(25%);
+              transition: fill 250ms ease-in-out;
+            }
+          }
+        }
+        > a:hover,
+        a:active,
+        a path {
+          color: var(--secondary);
+          & path {
+            fill: var(--secondary);
+          }
+        }
+        > a::after {
+          content: "";
+          left: -5%;
+          top: -20%;
+          width: 110%;
+          height: 150%;
+          transform: skew(calc(var(--skew) * -1));
+          position: absolute;
+          background-color: var(--secondary);
+          scale: 1;
+          transition: height 250ms ease-in-out, top 250ms ease-in-out,
+            left 250ms ease-in-out, width 250ms ease-in-out;
+          z-index: -1;
+        }
+        > a:hover::after,
+        a:active::after {
+          height: 4px;
+          top: 120%;
+          left: 0%;
+          width: 100%;
         }
       }
     }
@@ -1521,11 +1581,11 @@ body.dark {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      & .blogBillCollection {
+      & .blogPostCollection {
         display: grid;
         gap: 20px;
       }
-      & .blogBill {
+      & .blogPost {
         width: 100%;
         background-color: var(--accentLight10);
         border-radius: 25px;
@@ -1546,8 +1606,8 @@ body.dark {
           }
         }
       }
-      & .blogBill:hover,
-      .blogBill:focus-within {
+      & .blogPost:hover,
+      .blogPost:focus-within {
         background-color: var(--secondary10);
       }
       & p {
@@ -1652,9 +1712,13 @@ svg.darkModeToggleSVG.toggle {
   }
 }
 
-.carousel__indicator.current-slide::after {
-  animation: carouselMarkerLoad 5000ms forwards;
+/* .carousel__indicator.current-slide::after {
+  animation: carouselMarkerLoaded 500ms forwards;
 }
+
+.carousel.autoplay .carousel__indicator.current-slide::after {
+  animation: carouselMarkerLoad 5000ms forwards;
+} */
 
 .carousel__slide > svg {
   animation: carouselBgPan 60000ms infinite alternate-reverse linear;
@@ -1677,6 +1741,17 @@ svg.darkModeToggleSVG.toggle {
   100% {
     transform-origin: bottom center;
     transform: scaleY(0);
+  }
+}
+
+@keyframes carouselMarkerLoaded {
+  0% {
+    transform-origin: top center;
+    transform: scaleY(0);
+  }
+  100% {
+    transform-origin: top center;
+    transform: scaleY(1);
   }
 }
 
@@ -2176,7 +2251,7 @@ a:hover > svg.ctaArrow.pulse {
       gap: 20px !important;
     }
   }
-  .blogBill {
+  .blogPost {
     grid-template-columns: unset !important;
     & .tags {
       flex-wrap: wrap;
@@ -2233,8 +2308,6 @@ a:hover > svg.ctaArrow.pulse {
           flex-direction: column;
           gap: 20px !important;
           justify-content: center !important;
-          > svg {
-          }
           > .hero {
             margin: 0px auto;
             transform: translateX(0) !important;

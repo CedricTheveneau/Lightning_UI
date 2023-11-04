@@ -141,7 +141,7 @@
         </nav>
     </header>
     <main>
-        <div class="carousel">
+        <div class="carousel autoplay">
             <button class="carousel__button carousel__button--left hidden" style="display: none;">
                 <i class="fas fa-angle-left"></i>
             </button>
@@ -217,7 +217,17 @@
             </div>
         </div>
         <div class="content fit">
-            <h1 class="centered accent" style="margin-bottom: 20px;">All the Lightning UI Building blocs</h1>
+            <h2 class="centered accent" style="margin-bottom: 20px;">All the Lightning UI Building blocs</h2>
+            <h3 class="accent" style="margin-bottom: 20px;">Headings</h3>
+            <p>All the headings (from H1 to H3) are <span>styled to be easily seen and catch the eye</span>. If you need
+                them to
+                <span>stand out even more</span>, you can simple add the <span>"accent" class to them</span>, you'll
+                unlock a nice little
+                animation, with a conceptually stylized lightning floating next to them !
+            </p>
+            <p>Oh, and did I mention that you can <span>align them however you want</span> ? They're aligned left by
+                default, but if you <span>add the "centered" class</span> to them, they'll place themselves right in the
+                middle ! <span>- Pro tip : Try out the "alignedRight" class as well</span></p>
             <div class="threeBlocs">
                 <div class="info">
                     <h1>Heading 1</h1>
@@ -244,18 +254,22 @@
                     <h3 class="alignRight accent">Heading 3</h3>
                 </div>
             </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptas blanditiis esse natus. Quia
-                cumque reprehenderit saepe minus aliquid voluptas explicabo soluta voluptate voluptates, ipsa amet
-                ea dolorum laudantium consectetur <a href="#">recusandae iure eligendi blanditiis</a>, velit
-                incidunt quam
-                dignissimos! <span>Praesentium, odit!</span> Vel illo porro fuga, esse quam dolores quisquam ratione
-                reiciendis
-                hic nulla, accusantium cumque. Omnis voluptate dicta beatae velit eligendi error quae repellat
-                repudiandae quidem! Error, cumque eveniet totam, modi repellendus ad veniam voluptatem quo illum
-                iusto, adipisci ullam tempore veritatis maiores sint culpa alias laudantium consequatur ut quam
-                aspernatur aperiam voluptates ratione? Labore corrupti doloremque maxime vero dolorem. Cumque
-                doloribus cupiditate quasi animi iste, quae dignissimos, obcaecati dolore neque labore rerum nisi
-                porro error pariatur nihil deleniti ab commodi.</p>
+            <h3 class="accent" style="margin-block: 20px;">Text</h3>
+            <p>Of course, we have some text to offer ! And some pretty cool one, that is ! All <a href="#">the links you
+                    add</a> are
+                stylized and have neat little animation on hover, so you can't
+                miss them ! <span>Wanna draw the eyes towards some specific words ?</span> Just put them between "span"
+                tags and
+                they'll get bold and italic so they can stand out ! <span>- Oh and no need to add classes, this comes
+                    standard. Pretty nice, isn't it ?</span>
+            </p>
+            <h3 class="accent" style="margin-block: 20px;">Content blocs</h3>
+            <p>Lightning UI comes loaded with <span>various content blocs and layouts</span> to use and personnalize to
+                you every
+                needs ! So don't forget to <span>mess with those blocks to discover their full potential</span> !
+            </p>
+            <p>Those blocs are all <span>based on grid</span>, for a <span>robust layout and easy responsive
+                    adaptation</span></p>
             <div class="twoBlocs">
                 <img src="./assets/image-removebg-preview.png" alt="Runner">
                 <div class="info">
@@ -264,9 +278,9 @@
                         Quia
                         cumque reprehenderit saepe minus aliquid voluptas explicabo soluta voluptate voluptates, ipsa
                         amet
-                        ea dolorum laudantium consectetur recusandae iure <a href="#">eligendi blanditiis</a>, velit
+                        ea dolorum laudantium consectetur recusandae iure <a href="#">my awesome link</a>, velit
                         incidunt quam
-                        dignissimos! Praesentium, odit!</p>
+                        dignissimos! <span>My bold and italic text !</span></p>
                     <button><a href="">My awesome CTA <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -283,9 +297,9 @@
                         Quia
                         cumque reprehenderit saepe minus aliquid voluptas explicabo soluta voluptate voluptates, ipsa
                         amet
-                        ea dolorum laudantium consectetur recusandae iure <a href="/">eligendi blanditiis</a>, velit
+                        ea dolorum laudantium consectetur recusandae iure <a href="#">my awesome link</a>, velit
                         incidunt quam
-                        dignissimos! Praesentium, odit!</p>
+                        dignissimos! <span>My bold and italic text !</span></p>
                     <button><a href="">My awesome CTA <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -294,6 +308,278 @@
                             </svg> </a></button>
                 </div>
             </div>
+            <div class="gridBlocs">
+                <div class="info">
+                    <h2 class="centered">My awesome title</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptas blanditiis esse natus.
+                        Quia
+                        cumque reprehenderit saepe minus aliquid voluptas explicabo soluta voluptate voluptates, ipsa
+                        amet
+                        ea dolorum laudantium consectetur recusandae iure <a href="#">my awesome link</a>, velit
+                        incidunt quam
+                        dignissimos! <span>My bold and italic text !</span>
+                    </p>
+                    <button class="centered">
+                        <a href="#">My awesome CTA
+                            <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
+                                    fill="#DEFF0A" />
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+                <div class="info">
+                    <h2>My awesome title</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptas blanditiis esse natus.
+                        Quia
+                        cumque reprehenderit saepe minus aliquid voluptas explicabo soluta voluptate voluptates, ipsa
+                        amet
+                        ea dolorum laudantium consectetur recusandae iure <a href="#">my awesome link</a>, velit
+                        incidunt quam
+                        dignissimos! <span>My bold and italic text !</span>
+                    </p>
+                    <button>
+                        <a href="#">My awesome CTA
+                            <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
+                                    fill="#DEFF0A" />
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div class="threeBlocs">
+                <div class="info">
+                    <h2 class="centered">My awesome title</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptas blanditiis esse natus.
+                        Ipsa
+                        amet
+                        ea dolorum laudantium consectetur recusandae iure voluptas <a href="#">my awesome link</a>.
+                        <span>My
+                            bold
+                            and italic text !</span>
+                    </p>
+                    <button class="centered">
+                        <a href="#">My awesome CTA
+                            <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
+                                    fill="#DEFF0A" />
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+                <div class="info">
+                    <h2 class="centered">My awesome title</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptas blanditiis esse natus.
+                        Ipsa
+                        amet
+                        ea dolorum laudantium consectetur recusandae iure voluptas <a href="#">my awesome link</a>.
+                        <span>My
+                            bold
+                            and italic text !</span>
+                    </p>
+                    <button class="centered">
+                        <a href="#">My awesome CTA
+                            <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
+                                    fill="#DEFF0A" />
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+                <div class="info">
+                    <h2 class="centered">My awesome title</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptas blanditiis esse natus.
+                        Ipsa
+                        amet
+                        ea dolorum laudantium consectetur recusandae iure voluptas <a href="#">my awesome link</a>.
+                        <span>My
+                            bold
+                            and italic text !</span>
+                    </p>
+                    <button class="centered">
+                        <a href="#">My awesome CTA
+                            <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
+                                    fill="#DEFF0A" />
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+            </div>
+            <br>
+            <h3 class="accent" style="margin-block: 20px;">Blog posts</h3>
+            <p>This library also includes a pretty neat and efficient <span>dynamic blogging system</span>. All the
+                content is based on an array of object in its own file. Just <span>add a div with the class of
+                    "blogPostCollection"</span> to your page and <span>link your js file containing the blog posts'
+                    data</span> and the main js
+                file will do the work for you.
+            </p>
+            <p>The component in itself is based on the <span>details/summary HTML5 tag</span>, <span>click on the
+                    summary text to unveil
+                    the whole content</span>. <span>No JS</span>, everything's managed by the browser thanks to the HTML
+                tag itself.</p>
+            <div class="blogPost"><img src="./assets/image-removebg-preview.png" alt="Thumbnail">
+                <details>
+                    <summary>
+                        <p>My blog post title</p>
+                        <p>My blog post summary.</p>
+                        <p>It can be long, by the way...</p>
+                        <div class="tags"><span class="tag feature">Tag 1</span>
+                            <p>-&nbsp;&nbsp; November 1, 2023</p>
+                        </div>
+                    </summary>
+                    <p>My blog post's content</p>
+                    <p>As always, thanks for reading this post, sincerely.</p><br>
+                    <p>Cédric, creator of Lightning UI</p>
+                </details>
+            </div>
+            <br>
+            <h3 class="accent" style="margin-block: 20px;">CTAs</h3>
+            <p>Of course, a good website wouldn't be complete with some CTAs, we have <span>two variants</span> To
+                access the other variant, just add the "simpler" class to them - second row of CTAs. They're
+                <span>fully animated</span> and
+                really <span>stand out</span> -
+                I'm actually
+                really proud of how they look.
+            </p>
+            <button>
+                <a href="#">Left aligned CTA
+                    <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
+                            fill="#DEFF0A" />
+                    </svg>
+                </a>
+            </button>
+            <button class="centered">
+                <a href="#">Centered CTA
+                    <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
+                            fill="#DEFF0A" />
+                    </svg>
+                </a>
+            </button>
+            <button class="alignRight">
+                <a href="#">Right aligned CTA
+                    <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
+                            fill="#DEFF0A" />
+                    </svg>
+                </a>
+            </button>
+            <button class="simpler">
+                <a href="#">Left aligned CTA
+                    <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
+                            fill="#DEFF0A" />
+                    </svg>
+                </a>
+            </button>
+            <button class="centered simpler">
+                <a href="#">Centered CTA
+                    <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
+                            fill="#DEFF0A" />
+                    </svg>
+                </a>
+            </button>
+            <button class="alignRight simpler">
+                <a href="#">Right aligned CTA
+                    <svg class="ctaArrow" width="79" height="37" viewBox="0 0 79 37" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M77.5815 20.3378C78.5578 19.3615 78.5578 17.7786 77.5815 16.8023L61.6716 0.892399C60.6953 -0.0839119 59.1124 -0.0839119 58.1361 0.892399C57.1597 1.86871 57.1597 3.45162 58.1361 4.42793L72.2782 18.5701L58.1361 32.7122C57.1597 33.6885 57.1597 35.2714 58.1361 36.2477C59.1124 37.224 60.6953 37.224 61.6716 36.2477L77.5815 20.3378ZM0.813721 21.0701H75.8137V16.0701H0.813721V21.0701Z"
+                            fill="#DEFF0A" />
+                    </svg>
+                </a>
+            </button>
+            <br>
+            <h3 class="accent" style="margin-block: 20px;">Special blocks</h3>
+            <p>Maybe you've noticed that I didn't mention any <span>fundamental UI element</span> yet. Now's the time to
+                tell you
+                about those blocks. <span>Header, Footer, Carousel, Overlays.</span>
+            </p>
+            <p>When it comes to the <span>header</span>, it's pretty <span>straight forward, yet appealing and pure eye
+                    candy</span>. It rocks
+                a <span>simple yet effective layout</span> with on the right, the <span>logo and brand name (and
+                    catchphrase !)</span>, and on the
+                left, a stylish list of tilted, clearly separated <span>navlinks, followed by a beautiful CTA</span>.
+                And it also
+                <span>gets opaque on scroll</span>, so it doesn't goes across all the amazing content below it.
+            </p>
+            <p>
+                The <span>dark/light mode</span> selector <span>comes standard</span> as well, fully managed by JS, so
+                you don't have to ! And,
+                obviously, <span>the navbar gets an hamburger menu layout on smaller devices</span>, so that's another
+                thing taken
+                care of for you !
+            </p>
+            <p>The <span>footer</span> you can see right below is fairly simple, <span>logo + brand name</span> on the
+                left, <span>navlinks</span> on the
+                right, they stack up on smaller devices. <span>It's as straightforward as it gets.</span>
+            </p>
+            <p>
+                Maybe you've noticed it - if you didn't, there's something wrong, but this library also includes
+                <span>carousels</span>. They're <span>auto-managed by JS</span> so you're not overwhelmed with managing
+                it yourself.
+                No need to add indicators, it's automatically done, based on your slides. <span>Add the "autoplay"
+                    class</span> to it and JS
+                will take care of making it slide for you, with classy entry animations. And to <span>switch the layout
+                    of a
+                    slide</span>, just <span>add "reversed"</span> to it, as easy as that !
+            </p>
+            <p>
+                Talking about animations, have you noticed <span>the panning lightning in the background</span> ? And
+                the <span>arrow
+                    animations</span> that <span>change when hovering on the CTAs</span> ?
+            </p>
+            <p>
+                Finally, <span>overlays</span>. If you look at the bottom center of the page, you should see arrows,
+                pointing
+                upwards... try clicking on it, and be amazed by its animations while <span>it brings you back to the top
+                    of
+                    the page</span> ! It also represents an <span>effective invitation to
+                    scrolling</span> back down once you're back at the top. While scrolling through the page, <span>it
+                    will
+                    always accompagny you</span>, to let you know you can still scroll... Until the very end, when it'll
+                tilt and
+                <span>let you know you've reach the bottom of the page</span>.
+            </p>
+            <p>This overlay is known by the "overflay" class, it's a block you can find at the top of the source code,
+                with an SVG inside.
+            </p>
+            <p>Try getting back up to the top and look on the bottom left corner, you should notice <span>another
+                    overlay</span>,
+                which invites you to follow our social media. This one is pretty simple : it <span>sticks to that place
+                    all
+                    the time</span>, you can put any text you want and any social media link you want, or anything else,
+                really,
+                <span>it's just there to use some extra space</span> !
+            </p>
+            <p>This overlay element is known by the "socials" class, which contains some text and two social media SVGs
+                <span>- I recommend sticking to the SVG format, as there's some style applied to them.</span>
+            </p>
         </div>
     </main>
     <footer>

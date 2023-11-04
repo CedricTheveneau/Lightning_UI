@@ -52,7 +52,9 @@ const carouselSetup = () => {
         doSetTimeout(i);
       }
     };
-    carouselAutoplay();
+    if (document.querySelector(".carousel").classList.contains("autoplay")) {
+      carouselAutoplay();
+    }
 
     function doSetTimeout(i) {
       setTimeout(function () {
