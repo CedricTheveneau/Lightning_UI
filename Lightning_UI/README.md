@@ -1,4 +1,4 @@
-# Lightning_UI - The beginner friendly CSS library | Version : V1.0.1
+# Lightning_UI | Version : V1.0.1
 
 [Lightning UI](https://cedrictheveneau.github.io/Lightning_UI/) is a CSS library I made to simplify the styling on a cross platform project. The goal is to have a defined style everywhere that will save me both time and style consistency issues to fix.
 
