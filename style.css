@@ -227,7 +227,7 @@ body {
         gap: 10px;
         > img {
           width: 25px;
-          height: auto;
+          aspect-ratio: 1;
         }
         > .logoDark {
           display: none;
@@ -1096,7 +1096,7 @@ body {
         gap: 10px;
         > img {
           width: 25px;
-          height: auto;
+          aspect-ratio: 1;
         }
         > .logoDark {
           display: none;
@@ -1283,7 +1283,7 @@ body.dark {
         gap: 10px;
         > img {
           width: 25px;
-          height: auto;
+          aspect-ratio: 1;
         }
         > .logoLight {
           display: none;
