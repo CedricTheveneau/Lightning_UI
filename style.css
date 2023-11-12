@@ -1409,6 +1409,10 @@ body.dark {
   }
 
   >main {
+    & .carousel__indicator.current-slide::after {
+      background-color: var(--accentLight);
+    }
+
     >.content {
 
       & .blogPost:hover,
