@@ -1,5 +1,14 @@
 const blogData = [
   {
+    title: "V1.0.2 - Macroburst",
+    summary: "<p>Huge optimization update</p>",
+    tags: "<span class='tag release'>Release</span>",
+    date: "<p>-&nbsp;&nbsp; November 12, 2023</p>",
+    content:
+      "<p>I still had plenty of things to do last time I pushed an update. I specifically noted that the library still needed to be fully optimized.</p><p><span>I'm truly proud to say that today marks a huge leap forward when it comes to the library's optimization !</span></p><p>I've worked hard to bring this project to new heights, and I can now officially say that it passed Google's Lighthouse report with respective scores of : <span>99% Performance, 100% Accessibility, 100% Best practice and 92% SEO</span> - Wouhouuu !!</p><p>Keep in mind that this score may vary, depending on wether you conduct tests in Icognito mode - exensions will be disabled - or not.</p><p>But Lighthouse isn't enough for me. As I'm really worried about my projects' environmental impact, I checked out its <a href='https://muchas-glacias.com/' title='Have a look at LaBanquise's website'>LaBanquise</a> score. It's a more difficult test to pass, but it did failry well - I plan on optimizing the library even more in the future - with the following scores : <span>83% Ecology, 76% Performance, 95% Accessibility, 100% Best practices and 90% SEO</span>. The website also gives two indexes, which are : Pepper Index - How efficient is the website and a Carbon Index - How much it pollutes. <span>I obtained an 86.4% Pepper Index and 0.06g of emited CO2 - Which is cleaner than 97% of tested websites !</span></p><p>Those are very encouraging numbers and I hope we'll reach even better ones in the future !</p><p>Once again, thank you for taking some of your precious time to read those lines, sincerely.</p><br/><p>Cédric, founder of Lightning UI<p>",
+    img: "../assets/logoLight.svg",
+  },
+  {
     title: "V1.0.1 - Macroburst",
     summary: "<p>The first big update to the library is here !</p>",
     tags: "<span class='tag release'>Release</span>",
