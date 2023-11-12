@@ -23,11 +23,6 @@ This library only uses HTML, CSS and JS.
 - Components are styled based on nesting, to keep a strict but robust layout. When using the components given with the library, you'll be sure to have a perfect render.
 - JS is used for various dynamic elements/functionnalities, like the dark/light theme, the carousel, and other animations based on scroll.
 
-## Flags / TO DO :
-
-- [&#10060;] SEO optimisation
-- [&#10060;] Accessibility features
-
 ## Quick start :
 
 You don't even need to use the command line to grab a copy of Lightning UI, just go on [the website](https://cedrictheveneau.github.io/Lightning_UI/) and click on "Download library", the library will be saved as a zip file with everything to start up, and you'll even be redirected towards the [quick start page](https://cedrictheveneau.github.io/Lightning_UI/pages/quickStart.html), guiding you through the startup. As simple as that.
