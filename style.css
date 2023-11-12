@@ -54,16 +54,20 @@ html {
 button {
   cursor: pointer;
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
+
 .centered {
   margin: 0 auto;
 }
+
 .alignRight {
   justify-items: flex-end;
   align-self: flex-end;
 }
+
 /* Prevents keyframes on page load */
 body.preload * {
   animation-duration: 0s !important;
@@ -86,14 +90,10 @@ h1 {
   font-weight: var(--h1Weight);
   --textOutline: var(--h1Outline);
   --textShadow: 6px;
-  text-shadow: calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
-      var(--primary),
-    calc((var(--textOutline) / 2) * -1) calc((var(--textOutline) / 2) * -1) 0
-      var(--primary),
-    calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0
-      var(--primary),
-    calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0
-      var(--primary),
+  text-shadow: calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
+    calc((var(--textOutline) / 2) * -1) calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+    calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+    calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0 var(--primary),
     calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
     var(--textShadow) var(--textShadow) 0px var(--secondary);
 }
@@ -103,14 +103,10 @@ h2 {
   font-weight: var(--h2Weight);
   --textOutline: var(--h2Outline);
   --textShadow: 4px;
-  text-shadow: calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
-      var(--primary),
-    calc((var(--textOutline) / 2) * -1) calc((var(--textOutline) / 2) * -1) 0
-      var(--primary),
-    calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0
-      var(--primary),
-    calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0
-      var(--primary),
+  text-shadow: calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
+    calc((var(--textOutline) / 2) * -1) calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+    calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+    calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0 var(--primary),
     calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
     var(--textShadow) var(--textShadow) 0px var(--secondary);
 }
@@ -120,14 +116,10 @@ h3 {
   font-weight: var(--h3Weight);
   --textOutline: var(--h3Outline);
   --textShadow: 2px;
-  text-shadow: calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
-      var(--primary),
-    calc((var(--textOutline) / 2) * -1) calc((var(--textOutline) / 2) * -1) 0
-      var(--primary),
-    calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0
-      var(--primary),
-    calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0
-      var(--primary),
+  text-shadow: calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
+    calc((var(--textOutline) / 2) * -1) calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+    calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+    calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0 var(--primary),
     calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
     var(--textShadow) var(--textShadow) 0px var(--secondary);
 }
@@ -139,7 +131,7 @@ p {
   line-height: var(--textLineHeight);
 }
 
-p > a {
+p>a {
   text-decoration: none;
   font-weight: 600;
 }
@@ -151,9 +143,11 @@ body {
   font-size: var(--textSize);
   font-weight: var(--textWeight);
   position: relative;
+
   & .accent {
     position: relative;
   }
+
   & .accent::after {
     content: "";
     height: 50%;
@@ -166,6 +160,7 @@ body {
     animation: titleAccentEntry 1000ms 500ms forwards,
       titleAccentIdle 3000ms 1500ms infinite ease-in-out;
   }
+
   & .accent::before {
     content: "";
     height: 50%;
@@ -178,7 +173,8 @@ body {
     animation: titleAccentEntrySecond 1000ms 500ms forwards,
       titleAccentSecondIdle 3000ms 1500ms infinite ease-in-out;
   }
-  > .socials {
+
+  >.socials {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -187,7 +183,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    > p {
+
+    >p {
       font-family: var(--quicksand);
       color: var(--secondary);
       font-weight: bold;
@@ -195,7 +192,8 @@ body {
       font-size: var(--h3Size);
     }
   }
-  > .overflay {
+
+  >.overflay {
     width: fit-content;
     height: fit-content;
     position: fixed;
@@ -203,82 +201,91 @@ body {
     left: 50%;
     transform: translateX(-50%) translateY(90dvh);
     z-index: 2;
-    > a {
-      > svg {
+
+    >a {
+      >svg {
         transition: transform 300ms ease-in-out;
       }
     }
   }
-  > header {
+
+  >header {
     position: fixed;
     z-index: 3;
     width: 100%;
     transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
-    > nav {
+
+    >nav {
       padding-block: 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       .logo {
         padding-left: 10px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         gap: 10px;
-        > img {
+
+        >img {
           width: 25px;
           height: 42px;
         }
-        > .logoDark {
+
+        >.logoDark {
           display: none;
         }
-        > .branding {
+
+        >.branding {
           display: flex;
           align-items: center;
           gap: 15px;
-          > h1 {
-            --textOutline: calc(
-              var(--heroOutline) / calc(var(--goldenRatio) * 2)
-            );
+
+          >h1 {
+            --textOutline: calc(var(--heroOutline) / calc(var(--goldenRatio) * 2));
             --textShadow: 3px;
             font-size: var(--h3Size);
-            text-shadow: calc(var(--textOutline) / 2)
-                calc(var(--textOutline) / 2) 0 var(--primary),
-              calc((var(--textOutline) / 2) * -1)
-                calc((var(--textOutline) / 2) * -1) 0 var(--primary),
-              calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0
-                var(--primary),
-              calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0
-                var(--primary),
-              calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
-                var(--primary),
+            text-shadow: calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
+              calc((var(--textOutline) / 2) * -1) calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+              calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+              calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0 var(--primary),
+              calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
               var(--textShadow) var(--textShadow) 0px var(--secondary);
           }
-          > span {
+
+          >span {
             font-size: var(--h3Size);
           }
-          > p {
+
+          >p {
             font-weight: 600;
             font-style: calc(36.75px / var(--goldenRatio));
-            > a {
+
+            >a {
               color: var(--secondary);
               font-weight: 500;
+              transition: color 500ms ease-in-out;
             }
           }
         }
       }
+
       .navbar {
         padding-right: 20px;
-        > ul.links {
+
+        >ul.links {
           display: flex;
           align-items: center;
           justify-content: flex-end;
           list-style: none;
           gap: 10px;
-          > * {
+
+          >* {
             color: var(--secondary);
             font-weight: var(--h3Weight);
-            > a {
+
+            >a {
               color: var(--secondary);
               font-weight: var(--h3Weight);
               font-style: italic;
@@ -287,7 +294,8 @@ body {
               --transform-origin: right center;
               --transform-origin-alt: left center;
             }
-            > a::after {
+
+            >a::after {
               content: "";
               inset: 0;
               height: 4px;
@@ -299,27 +307,32 @@ body {
               transform-origin: var(--transform-origin);
               transition: scale 250ms ease-in-out;
             }
-            > a:hover::after,
+
+            >a:hover::after,
             a.active::after {
               transform-origin: var(--transform-origin-alt);
               scale: 1;
             }
-            > .navbarToggle {
+
+            >.navbarToggle {
               display: none;
-              > svg {
-                > path {
+
+              >svg {
+                >path {
                   stroke: var(--secondary);
                   fill: var(--secondary);
                 }
               }
             }
-            > button {
+
+            >button {
               padding: 5px;
               border: transparent;
               background-color: transparent;
               font-size: var(--textSize);
               font-weight: var(--textWeight);
-              > a {
+
+              >a {
                 color: var(--primary);
                 font-weight: var(--h3Weight);
                 font-style: italic;
@@ -327,11 +340,13 @@ body {
                 transition: color 250ms ease-in-out;
                 --afterColor2: var(--secondary);
               }
-              > a:hover,
+
+              >a:hover,
               a:active {
                 color: var(--secondary);
               }
-              > a::after {
+
+              >a::after {
                 content: "";
                 left: -5%;
                 top: -20%;
@@ -345,50 +360,59 @@ body {
                   left 250ms ease-in-out, width 250ms ease-in-out;
                 z-index: -1;
               }
-              > a:hover::after,
+
+              >a:hover::after,
               a:active::after {
                 height: 4px;
                 top: 120%;
                 left: 0%;
                 width: 100%;
               }
-              > svg.darkModeToggleSVG {
+
+              >svg.darkModeToggleSVG {
                 transform: translateY(0%);
                 display: none;
               }
-              > svg.darkModeToggleSVG.toggle {
+
+              >svg.darkModeToggleSVG.toggle {
                 display: block;
               }
             }
           }
-          > span {
+
+          >span {
             transform: skew(calc(var(--skew) * -1));
           }
         }
       }
     }
   }
-  > main {
-    > .carousel {
+
+  >main {
+    >.carousel {
       height: 100dvh;
       width: 100%;
       overflow-y: hidden;
       position: relative;
-      > *.hidden {
+
+      >*.hidden {
         display: none;
       }
-      > .carousel__track-container {
+
+      >.carousel__track-container {
         position: relative;
         height: 100%;
         overflow: hidden;
-        > .carousel__track {
+
+        >.carousel__track {
           position: relative;
           height: 100%;
           margin: 0;
           padding: 0;
           list-style: none;
           transition: transform ease-in 250ms;
-          > .carousel__slide {
+
+          >.carousel__slide {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -397,71 +421,77 @@ body {
             width: 100%;
             top: 0;
             bottom: 0;
-            > svg {
+
+            >svg {
               position: absolute;
               left: 40%;
-              > path {
+
+              >path {
                 fill: var(--secondary10);
               }
             }
-            > .hero {
+
+            >.hero {
               width: 50%;
               transform: translateX(90px);
-              > h2 {
+
+              >h2 {
                 --textOutline: var(--heroOutline);
                 --textShadow: 6px;
                 font-size: var(--heroSize);
                 font-weight: var(--heroWeight);
                 line-height: var(--heroLineHeight);
                 text-transform: uppercase;
-                text-shadow: calc(var(--textOutline) / 2)
-                    calc(var(--textOutline) / 2) 0 var(--primary),
-                  calc((var(--textOutline) / 2) * -1)
-                    calc((var(--textOutline) / 2) * -1) 0 var(--primary),
-                  calc(var(--textOutline) / 2)
-                    calc((var(--textOutline) / 2) * -1) 0 var(--primary),
-                  calc((var(--textOutline) / 2) * -1)
-                    calc(var(--textOutline) / 2) 0 var(--primary),
-                  calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
-                    var(--primary),
+                text-shadow: calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
+                  calc((var(--textOutline) / 2) * -1) calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+                  calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+                  calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0 var(--primary),
+                  calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
                   var(--textShadow) var(--textShadow) 0px var(--secondary);
               }
-              > p {
+
+              >p {
                 margin-top: 10px;
                 margin-bottom: 50px;
                 line-height: var(--h2Size);
                 font-size: var(--h2Size);
                 font-weight: var(--h2Weight);
               }
-              > button {
+
+              >button {
                 /* transform: translateX(30px); */
                 padding: 5px;
                 border: transparent;
                 background-color: transparent;
                 font-size: var(--h2Size);
                 font-weight: var(--h3Weight);
-                > a {
+
+                >a {
                   color: var(--primary);
                   font-weight: var(--h3Weight);
                   font-style: italic;
                   position: relative;
                   transition: color 250ms ease-in-out;
-                  > svg {
-                    > path {
+
+                  >svg {
+                    >path {
                       fill: var(--primary);
                       transition: fill 250ms ease-in-out;
                     }
                   }
                 }
-                > a:hover,
+
+                >a:hover,
                 a:active,
                 a path {
                   color: var(--secondary);
+
                   & path {
                     fill: var(--secondary);
                   }
                 }
-                > a::after {
+
+                >a::after {
                   content: "";
                   left: -5%;
                   top: -20%;
@@ -475,7 +505,8 @@ body {
                     left 250ms ease-in-out, width 250ms ease-in-out;
                   z-index: -1;
                 }
-                > a:hover::after,
+
+                >a:hover::after,
                 a:active::after {
                   height: 4px;
                   top: 120%;
@@ -484,37 +515,44 @@ body {
                 }
               }
             }
-            > img {
+
+            >img {
               width: 45%;
               height: 100%;
               object-fit: contain;
             }
           }
-          > .carousel__slide.reversed {
-            > svg {
+
+          >.carousel__slide.reversed {
+            >svg {
               left: -20%;
             }
-            > .hero {
+
+            >.hero {
               transform: translateX(-90px);
               order: 2;
               display: flex;
               flex-direction: column;
               align-items: end;
-              > h2 {
+
+              >h2 {
                 text-align: right;
               }
-              > p {
+
+              >p {
                 text-align: right;
               }
             }
           }
-          > .carousel__slide.current-slide {
+
+          >.carousel__slide.current-slide {
             z-index: 1;
             background-color: var(--primary);
           }
         }
       }
-      > .carousel__nav {
+
+      >.carousel__nav {
         position: absolute;
         z-index: 2;
         right: 10px;
@@ -523,7 +561,8 @@ body {
         align-items: center;
         justify-content: flex-start;
         gap: 5px;
-        > .carousel__indicator {
+
+        >.carousel__indicator {
           border: transparent;
           background-color: var(--secondary50);
           width: 8px;
@@ -532,7 +571,8 @@ body {
           position: relative;
           transition: opacity 250ms ease-in-out;
         }
-        > .carousel__indicator.current-slide::after {
+
+        >.carousel__indicator.current-slide::after {
           content: "";
           background-color: var(--accentDark);
           inset: 0;
@@ -543,14 +583,16 @@ body {
         }
       }
     }
-    > .carousel:not(.autoplay) {
-      > .carousel__nav {
-        > .carousel__indicator.current-slide::after {
+
+    >.carousel:not(.autoplay) {
+      >.carousel__nav {
+        >.carousel__indicator.current-slide::after {
           animation: carouselMarkerLoaded 500ms forwards;
         }
       }
     }
-    > .content {
+
+    >.content {
       scroll-snap-type: mandatory;
       scroll-snap-align: start;
       height: 100dvh;
@@ -558,10 +600,12 @@ body {
       display: flex;
       flex-direction: column;
       gap: 20px;
+
       & .blogPostCollection {
         display: grid;
         gap: 20px;
       }
+
       /* & .blogPostCollection.grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -585,50 +629,62 @@ body {
         gap: 15px;
         grid-template-columns: 1fr 3fr;
         transition: background-color 250ms ease-in-out;
-        > img {
+
+        >img {
           max-width: 200px;
           aspect-ratio: 1;
           border-radius: 10px;
           align-self: baseline;
         }
-        > details {
+
+        >details {
           width: 100%;
-          > summary {
+
+          >summary {
             cursor: pointer;
             list-style: none;
             display: grid;
             gap: 20px;
-            > p:nth-child(1) {
+
+            >p:nth-child(1) {
               font-weight: var(--h1Weight);
               font-size: var(--h2Size);
               font-family: var(--montserrat);
               font-style: italic;
             }
-            > .tags {
+
+            >.tags {
               display: flex;
               align-items: center;
               gap: 10px;
-              > .tag {
+              flex-wrap: wrap;
+
+              >.tag {
                 padding: 5px 10px;
                 border-radius: 50px;
                 font-weight: var(--h2Weight);
               }
-              > .tag.release {
+
+              >.tag.release {
                 background-color: var(--primary);
               }
-              > .tag.feature {
+
+              >.tag.feature {
                 background-color: var(--accentDark);
                 color: var(--accentLight);
               }
-              > p {
+
+              >p {
                 font-style: italic;
                 font-weight: var(--h2Weight);
               }
             }
           }
+
           > :nth-child(2) {
             padding-top: 20px;
           }
+
           > :last-child {
             font-weight: var(--h1Weight);
             font-style: italic;
@@ -636,21 +692,25 @@ body {
           }
         }
       }
+
       & .blogPost:hover,
       .blogPost:focus-within {
         background-color: var(--accentLight);
       }
+
       & ul {
         font-weight: normal;
         padding: 0 0 0 25px;
       }
+
       & p,
-      ul > li {
-        > a {
+      ul>li {
+        >a {
           color: var(--accentDark);
           position: relative;
         }
-        > a::after {
+
+        >a::after {
           position: absolute;
           content: "";
           background-color: var(--accentDark);
@@ -660,30 +720,36 @@ body {
           transform-origin: right center;
           transition: transform 250ms ease-in-out;
         }
-        > a:hover::after {
+
+        >a:hover::after {
           transform: translateY(20px) scaleX(1) skew(calc(var(--skew) * -1));
           transform-origin: left center;
         }
-        > span {
+
+        >span {
           font-weight: bold;
           font-style: italic;
         }
       }
-      > .twoBlocs {
+
+      >.twoBlocs {
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         justify-items: center;
-        > img {
+
+        >img {
           max-width: 500px;
           aspect-ratio: 1;
           object-fit: contain;
         }
-        > .info {
+
+        >.info {
           display: grid;
           gap: 40px;
-          > button {
+
+          >button {
             width: fit-content;
             /* transform: translateX(30px); */
             padding: 5px;
@@ -691,14 +757,16 @@ body {
             background-color: transparent;
             font-size: calc(var(--h2Size) * 0.7);
             font-weight: var(--h3Weight);
-            > a {
+
+            >a {
               color: var(--secondary);
               font-weight: var(--h3Weight);
               font-style: italic;
               position: relative;
               transition: color 250ms 250ms ease-in-out;
-              > svg {
-                > path {
+
+              >svg {
+                >path {
                   fill: var(--secondary);
                   scale: 0.7;
                   transform: translateY(35%) translateX(25%);
@@ -706,15 +774,18 @@ body {
                 }
               }
             }
-            > a:hover,
+
+            >a:hover,
             a:active,
             a path {
               color: var(--primary);
+
               & path {
                 fill: var(--primary);
               }
             }
-            > a::after {
+
+            >a::after {
               content: "";
               left: -5%;
               top: -20%;
@@ -728,11 +799,13 @@ body {
               transition: background-color 250ms 250ms ease-in-out;
               z-index: -1;
             }
-            > a:hover::after,
+
+            >a:hover::after,
             a:active::after {
               background-color: var(--secondary);
             }
-            > a::before {
+
+            >a::before {
               content: "";
               left: 0%;
               top: 0%;
@@ -747,7 +820,8 @@ body {
                 width 250ms ease-in-out;
               z-index: -1;
             }
-            > a:hover::before,
+
+            >a:hover::before,
             a:active::before {
               left: -5%;
               top: -20%;
@@ -758,30 +832,36 @@ body {
           }
         }
       }
-      > .twoBlocs.reversed {
+
+      >.twoBlocs.reversed {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         justify-items: center;
-        > .info {
+
+        >.info {
           order: -1;
         }
       }
-      > .threeBlocs {
+
+      >.threeBlocs {
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(3, 1fr);
         align-items: center;
         justify-items: center;
-        > img {
+
+        >img {
           max-width: 500px;
           aspect-ratio: 1;
           object-fit: contain;
         }
-        > .info {
+
+        >.info {
           display: grid;
           gap: 40px;
-          > button {
+
+          >button {
             width: fit-content;
             /* transform: translateX(30px); */
             padding: 5px;
@@ -789,14 +869,16 @@ body {
             background-color: transparent;
             font-size: calc(var(--h2Size) * 0.7);
             font-weight: var(--h3Weight);
-            > a {
+
+            >a {
               color: var(--secondary);
               font-weight: var(--h3Weight);
               font-style: italic;
               position: relative;
               transition: color 250ms 250ms ease-in-out;
-              > svg {
-                > path {
+
+              >svg {
+                >path {
                   fill: var(--secondary);
                   scale: 0.7;
                   transform: translateY(35%) translateX(25%);
@@ -804,15 +886,18 @@ body {
                 }
               }
             }
-            > a:hover,
+
+            >a:hover,
             a:active,
             a path {
               color: var(--primary);
+
               & path {
                 fill: var(--primary);
               }
             }
-            > a::after {
+
+            >a::after {
               content: "";
               left: -5%;
               top: -20%;
@@ -826,11 +911,13 @@ body {
               transition: background-color 250ms 250ms ease-in-out;
               z-index: -1;
             }
-            > a:hover::after,
+
+            >a:hover::after,
             a:active::after {
               background-color: var(--secondary);
             }
-            > a::before {
+
+            >a::before {
               content: "";
               left: 0%;
               top: 0%;
@@ -845,7 +932,8 @@ body {
                 width 250ms ease-in-out;
               z-index: -1;
             }
-            > a:hover::before,
+
+            >a:hover::before,
             a:active::before {
               left: -5%;
               top: -20%;
@@ -856,20 +944,24 @@ body {
           }
         }
       }
-      > .gridBlocs {
+
+      >.gridBlocs {
         display: grid;
         gap: 40px;
         grid-template-columns: repeat(2, 1fr);
         align-items: start;
         justify-items: center;
+
         /* padding-block: 50px; */
-        > .info {
+        >.info {
           display: grid;
           gap: 12px;
+
           > :first-child {
             padding-bottom: 13px;
           }
-          > button {
+
+          >button {
             width: fit-content;
             /* transform: translateX(30px); */
             padding: 5px;
@@ -877,14 +969,16 @@ body {
             background-color: transparent;
             font-size: calc(var(--h2Size) * 0.7);
             font-weight: var(--h3Weight);
-            > a {
+
+            >a {
               color: var(--secondary);
               font-weight: var(--h3Weight);
               font-style: italic;
               position: relative;
               transition: color 250ms 250ms ease-in-out;
-              > svg {
-                > path {
+
+              >svg {
+                >path {
                   fill: var(--secondary);
                   scale: 0.7;
                   transform: translateY(35%) translateX(25%);
@@ -892,15 +986,18 @@ body {
                 }
               }
             }
-            > a:hover,
+
+            >a:hover,
             a:active,
             a path {
               color: var(--primary);
+
               & path {
                 fill: var(--primary);
               }
             }
-            > a::after {
+
+            >a::after {
               content: "";
               left: -5%;
               top: -20%;
@@ -914,11 +1011,13 @@ body {
               transition: background-color 250ms 250ms ease-in-out;
               z-index: -1;
             }
-            > a:hover::after,
+
+            >a:hover::after,
             a:active::after {
               background-color: var(--secondary);
             }
-            > a::before {
+
+            >a::before {
               content: "";
               left: 0%;
               top: 0%;
@@ -933,7 +1032,8 @@ body {
                 width 250ms ease-in-out;
               z-index: -1;
             }
-            > a:hover::before,
+
+            >a:hover::before,
             a:active::before {
               left: -5%;
               top: -20%;
@@ -944,7 +1044,8 @@ body {
           }
         }
       }
-      > button:not(.simpler) {
+
+      >button:not(.simpler) {
         width: fit-content;
         /* transform: translateX(30px); */
         padding: 5px;
@@ -952,14 +1053,16 @@ body {
         background-color: transparent;
         font-size: calc(var(--h2Size) * 0.7);
         font-weight: var(--h3Weight);
-        > a {
+
+        >a {
           color: var(--secondary);
           font-weight: var(--h3Weight);
           font-style: italic;
           position: relative;
           transition: color 250ms 250ms ease-in-out;
-          > svg {
-            > path {
+
+          >svg {
+            >path {
               fill: var(--secondary);
               scale: 0.7;
               transform: translateY(35%) translateX(25%);
@@ -967,15 +1070,18 @@ body {
             }
           }
         }
-        > a:hover,
+
+        >a:hover,
         a:active,
         a path {
           color: var(--primary);
+
           & path {
             fill: var(--primary);
           }
         }
-        > a::after {
+
+        >a::after {
           content: "";
           left: -5%;
           top: -20%;
@@ -989,11 +1095,13 @@ body {
           transition: background-color 250ms 250ms ease-in-out;
           z-index: -1;
         }
-        > a:hover::after,
+
+        >a:hover::after,
         a:active::after {
           background-color: var(--secondary);
         }
-        > a::before {
+
+        >a::before {
           content: "";
           left: 0%;
           top: 0%;
@@ -1008,7 +1116,8 @@ body {
             width 250ms ease-in-out;
           z-index: -1;
         }
-        > a:hover::before,
+
+        >a:hover::before,
         a:active::before {
           left: -5%;
           top: -20%;
@@ -1017,7 +1126,8 @@ body {
             width 250ms ease-in-out;
         }
       }
-      > button.simpler {
+
+      >button.simpler {
         width: fit-content;
         /* transform: translateX(30px); */
         padding: 5px;
@@ -1025,14 +1135,16 @@ body {
         background-color: transparent;
         font-size: calc(var(--h2Size) * 0.7);
         font-weight: var(--h3Weight);
-        > a {
+
+        >a {
           color: var(--primary);
           font-weight: var(--h3Weight);
           font-style: italic;
           position: relative;
           transition: color 250ms ease-in-out;
-          > svg {
-            > path {
+
+          >svg {
+            >path {
               fill: var(--primary);
               scale: 0.7;
               transform: translateY(35%) translateX(25%);
@@ -1040,15 +1152,18 @@ body {
             }
           }
         }
-        > a:hover,
+
+        >a:hover,
         a:active,
         a path {
           color: var(--secondary);
+
           & path {
             fill: var(--secondary);
           }
         }
-        > a::after {
+
+        >a::after {
           content: "";
           left: -5%;
           top: -20%;
@@ -1062,7 +1177,8 @@ body {
             left 250ms ease-in-out, width 250ms ease-in-out;
           z-index: -1;
         }
-        > a:hover::after,
+
+        >a:hover::after,
         a:active::after {
           height: 4px;
           top: 120%;
@@ -1071,80 +1187,88 @@ body {
         }
       }
     }
-    > .content:not(:first-child) {
+
+    >.content:not(:first-child) {
       padding: 0px 100px 50px 100px;
     }
-    > .carousel + .content:not(:first-child) {
+
+    >.carousel+.content:not(:first-child) {
       padding: 100px 100px 50px 100px;
     }
-    > .content.fit {
+
+    >.content.fit {
       height: fit-content;
     }
   }
-  > footer {
-    > nav {
+
+  >footer {
+    >nav {
       padding-block: 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+
       .logo {
         padding-left: 10px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         gap: 10px;
-        > img {
+
+        >img {
           width: 25px;
           height: 42px;
         }
-        > .logoDark {
+
+        >.logoDark {
           display: none;
         }
-        > .branding {
+
+        >.branding {
           display: flex;
           align-items: center;
           gap: 15px;
-          > h1 {
-            --textOutline: calc(
-              var(--heroOutline) / calc(var(--goldenRatio) * 2)
-            );
+
+          >h1 {
+            --textOutline: calc(var(--heroOutline) / calc(var(--goldenRatio) * 2));
             --textShadow: 3px;
             font-size: var(--h3Size);
-            text-shadow: calc(var(--textOutline) / 2)
-                calc(var(--textOutline) / 2) 0 var(--primary),
-              calc((var(--textOutline) / 2) * -1)
-                calc((var(--textOutline) / 2) * -1) 0 var(--primary),
-              calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0
-                var(--primary),
-              calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0
-                var(--primary),
-              calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
-                var(--primary),
+            text-shadow: calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
+              calc((var(--textOutline) / 2) * -1) calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+              calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0 var(--primary),
+              calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0 var(--primary),
+              calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0 var(--primary),
               var(--textShadow) var(--textShadow) 0px var(--secondary);
           }
-          > span {
+
+          >span {
             font-size: var(--h3Size);
           }
-          > p {
+
+          >p {
             font-weight: 600;
             font-style: calc(36.75px / var(--goldenRatio));
           }
         }
       }
+
       .navbar {
         padding-right: 20px;
-        > ul.links {
+
+        >ul.links {
           display: flex;
           align-items: center;
           justify-content: flex-end;
           list-style: none;
           gap: 10px;
-          > * {
+
+          >* {
             color: var(--secondary);
             font-weight: var(--h3Weight);
-            > a,
-            a > svg > path {
+
+            >a,
+            a>svg>path {
               fill: var(--secondary);
               color: var(--secondary);
               font-weight: var(--h3Weight);
@@ -1154,10 +1278,12 @@ body {
               --transform-origin: right center;
               --transform-origin-alt: left center;
             }
-            > a:has(svg):hover::after {
+
+            >a:has(svg):hover::after {
               scale: 0;
             }
-            > a::after {
+
+            >a::after {
               content: "";
               inset: 0;
               height: 4px;
@@ -1169,18 +1295,21 @@ body {
               transform-origin: var(--transform-origin);
               transition: scale 250ms ease-in-out;
             }
-            > a:hover::after,
+
+            >a:hover::after,
             a.active::after {
               transform-origin: var(--transform-origin-alt);
               scale: 1;
             }
-            > button {
+
+            >button {
               padding: 5px;
               border: transparent;
               background-color: transparent;
               font-size: var(--textSize);
               font-weight: var(--textWeight);
-              > a {
+
+              >a {
                 color: var(--primary);
                 font-weight: var(--h3Weight);
                 font-style: italic;
@@ -1188,11 +1317,13 @@ body {
                 transition: color 250ms ease-in-out;
                 --afterColor2: var(--secondary);
               }
-              > a:hover,
+
+              >a:hover,
               a:active {
                 color: var(--secondary);
               }
-              > a::after {
+
+              >a::after {
                 content: "";
                 left: -5%;
                 top: -20%;
@@ -1206,23 +1337,27 @@ body {
                   left 250ms ease-in-out, width 250ms ease-in-out;
                 z-index: -1;
               }
-              > a:hover::after,
+
+              >a:hover::after,
               a:active::after {
                 height: 4px;
                 top: 120%;
                 left: 0%;
                 width: 100%;
               }
-              > svg.darkModeToggleSVG {
+
+              >svg.darkModeToggleSVG {
                 transform: translateY(0%);
                 display: none;
               }
-              > svg.darkModeToggleSVG.toggle {
+
+              >svg.darkModeToggleSVG.toggle {
                 display: block;
               }
             }
           }
-          > span {
+
+          >span {
             transform: skew(calc(var(--skew) * -1));
           }
         }
@@ -1239,412 +1374,68 @@ body.dark {
   --secondary10: #deff0a17;
   --accentDark: #2b0aff;
   --accentLight: #ebfcfb;
-  background-color: var(--primary);
-  color: var(--secondary);
-  font-size: var(--textSize);
-  font-weight: var(--textWeight);
   position: relative;
-  > .socials {
+
+  >.socials {
     & path {
       fill: #deff0a;
     }
   }
-  > .overflay {
-    width: fit-content;
-    height: fit-content;
-    position: fixed;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%) translateY(90dvh);
-    z-index: 2;
-    > a {
-      > svg {
+
+  >.overflay {
+    >a {
+      >svg {
         transition: transform 300ms ease-in-out;
-        > path {
+
+        >path {
           stroke: #deff0a;
         }
       }
     }
   }
-  > header {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    > nav {
-      padding-block: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+
+  >header {
+    >nav {
       .logo {
-        padding-left: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 10px;
-        > img {
-          width: 25px;
-          height: 42px;
-        }
-        > .logoLight {
+        >.logoLight {
           display: none;
         }
-        > .logoDark {
+
+        >.logoDark {
           display: block;
-        }
-        > .branding {
-          display: flex;
-          align-items: center;
-          gap: 15px;
-          > h1 {
-            --textOutline: calc(
-              var(--heroOutline) / calc(var(--goldenRatio) * 2)
-            );
-            --textShadow: 3px;
-            font-size: var(--h3Size);
-            text-shadow: calc(var(--textOutline) / 2)
-                calc(var(--textOutline) / 2) 0 var(--primary),
-              calc((var(--textOutline) / 2) * -1)
-                calc((var(--textOutline) / 2) * -1) 0 var(--primary),
-              calc(var(--textOutline) / 2) calc((var(--textOutline) / 2) * -1) 0
-                var(--primary),
-              calc((var(--textOutline) / 2) * -1) calc(var(--textOutline) / 2) 0
-                var(--primary),
-              calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
-                var(--primary),
-              var(--textShadow) var(--textShadow) 0px var(--secondary);
-          }
-          > span {
-            font-size: var(--h3Size);
-          }
-          > p {
-            font-weight: 600;
-            font-style: calc(36.75px / var(--goldenRatio));
-          }
-        }
-      }
-      .navbar {
-        padding-right: 20px;
-        > ul.links {
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          list-style: none;
-          gap: 10px;
-          > * {
-            color: var(--secondary);
-            font-weight: var(--h3Weight);
-            > a {
-              color: var(--secondary);
-              font-weight: var(--h3Weight);
-              font-style: italic;
-              position: relative;
-              --afterColor: var(--secondary);
-            }
-            > a::after {
-              content: "";
-              inset: 0;
-              height: 4px;
-              top: 120%;
-              transform: skew(calc(var(--skew) * -1));
-              position: absolute;
-              background-color: var(--afterColor);
-              scale: 0;
-              transform-origin: right center;
-              transition: scale 250ms ease-in-out;
-            }
-            > a:hover::after,
-            a.active::after {
-              transform-origin: left center;
-              scale: 1;
-            }
-            > button {
-              padding: 5px;
-              border: transparent;
-              background-color: transparent;
-              font-size: var(--textSize);
-              font-weight: var(--textWeight);
-              > a {
-                color: var(--primary);
-                font-weight: var(--h3Weight);
-                font-style: italic;
-                position: relative;
-                transition: color 250ms ease-in-out;
-                --afterColor2: var(--secondary);
-              }
-              > a:hover,
-              a:active {
-                color: var(--secondary);
-              }
-              > a::after {
-                content: "";
-                left: -5%;
-                top: -20%;
-                width: 110%;
-                height: 150%;
-                transform: skew(calc(var(--skew) * -1));
-                position: absolute;
-                background-color: var(--afterColor2);
-                scale: 1;
-                transition: height 250ms ease-in-out, top 250ms ease-in-out,
-                  left 250ms ease-in-out, width 250ms ease-in-out;
-                z-index: -1;
-              }
-              > a:hover::after,
-              a:active::after {
-                height: 4px;
-                top: 120%;
-                left: 0%;
-                width: 100%;
-              }
-            }
-          }
-          > span {
-            transform: skew(calc(var(--skew) * -1));
-          }
         }
       }
     }
   }
-  > main {
-    > .carousel {
-      height: 100dvh;
-      width: 100%;
-      overflow-y: hidden;
-      position: relative;
-      > *.hidden {
-        display: none;
-      }
-      > .carousel__track-container {
-        position: relative;
-        height: 100%;
-        overflow: hidden;
-        > .carousel__track {
-          position: relative;
-          height: 100%;
-          margin: 0;
-          padding: 0;
-          list-style: none;
-          transition: transform ease-in 250ms;
-          > .carousel__slide {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px;
-            position: absolute;
-            width: 100%;
-            top: 0;
-            bottom: 0;
-            > svg {
-              position: absolute;
-              left: 40%;
-              > path {
-                fill: var(--secondary10);
-              }
-            }
-            > .hero {
-              width: 50%;
-              transform: translateX(90px);
-              > h2 {
-                --textOutline: var(--heroOutline);
-                --textShadow: 6px;
-                font-size: var(--heroSize);
-                font-weight: var(--heroWeight);
-                line-height: var(--heroLineHeight);
-                text-transform: uppercase;
-                text-shadow: calc(var(--textOutline) / 2)
-                    calc(var(--textOutline) / 2) 0 var(--primary),
-                  calc((var(--textOutline) / 2) * -1)
-                    calc((var(--textOutline) / 2) * -1) 0 var(--primary),
-                  calc(var(--textOutline) / 2)
-                    calc((var(--textOutline) / 2) * -1) 0 var(--primary),
-                  calc((var(--textOutline) / 2) * -1)
-                    calc(var(--textOutline) / 2) 0 var(--primary),
-                  calc(var(--textOutline) / 2) calc(var(--textOutline) / 2) 0
-                    var(--primary),
-                  var(--textShadow) var(--textShadow) 0px var(--secondary);
-              }
-              > p {
-                margin-top: 10px;
-                margin-bottom: 50px;
-                line-height: var(--h2Size);
-                font-size: var(--h2Size);
-                font-weight: var(--h2Weight);
-              }
-              > button {
-                /* transform: translateX(30px); */
-                padding: 5px;
-                border: transparent;
-                background-color: transparent;
-                font-size: var(--h2Size);
-                font-weight: var(--h3Weight);
-                > a {
-                  color: var(--primary);
-                  font-weight: var(--h3Weight);
-                  font-style: italic;
-                  position: relative;
-                  transition: color 250ms ease-in-out;
-                  > svg {
-                    > path {
-                      fill: var(--primary);
-                      transition: fill 250ms ease-in-out;
-                    }
-                  }
-                }
-                > a:hover,
-                a:active,
-                a path {
-                  color: var(--secondary);
-                  & path {
-                    fill: var(--secondary);
-                  }
-                }
-                > a::after {
-                  content: "";
-                  left: -5%;
-                  top: -20%;
-                  width: 110%;
-                  height: 150%;
-                  transform: skew(calc(var(--skew) * -1));
-                  position: absolute;
-                  background-color: var(--secondary);
-                  scale: 1;
-                  transition: height 250ms ease-in-out, top 250ms ease-in-out,
-                    left 250ms ease-in-out, width 250ms ease-in-out;
-                  z-index: -1;
-                }
-                > a:hover::after,
-                a:active::after {
-                  height: 4px;
-                  top: 120%;
-                  left: 0%;
-                  width: 100%;
-                }
-              }
-            }
-            > img {
-              width: 45%;
-              height: 100%;
-              object-fit: contain;
-            }
-          }
-          > .carousel__slide.reversed {
-            > svg {
-              left: -20%;
-            }
-            > .hero {
-              transform: translateX(-90px);
-              order: 2;
-              display: flex;
-              flex-direction: column;
-              align-items: end;
-              > h2 {
-                text-align: right;
-              }
-              > p {
-                text-align: right;
-              }
-            }
-          }
-          > .carousel__slide.current-slide {
-            z-index: 1;
-            background-color: var(--primary);
-          }
-        }
-      }
-      > .carousel__nav {
-        position: absolute;
-        z-index: 2;
-        right: 10px;
-        bottom: 10px;
-        display: grid;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 5px;
-        > .carousel__indicator {
-          border: transparent;
-          background-color: var(--secondary50);
-          width: 8px;
-          aspect-ratio: 1 / 5;
-          transform: skewY(25deg);
-          position: relative;
-          transition: opacity 250ms ease-in-out;
-        }
-        > .carousel__indicator.current-slide::after {
-          content: "";
-          background-color: var(--accentLight);
-          inset: 0;
-          width: 100%;
-          transform: scaleY(0);
-          position: absolute;
-          animation: carouselMarkerLoad 5000ms forwards;
-        }
-      }
-    }
-    > .content {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      & .blogPostCollection {
-        display: grid;
-        gap: 20px;
-      }
-      & .blogPost {
-        width: 100%;
-        background-color: var(--accentLight10);
-        border-radius: 25px;
-        color: var(--secondary);
-        padding: 20px;
-        display: grid;
-        justify-items: center;
-        gap: 15px;
-        grid-template-columns: 1fr 3fr;
-        > details {
-          > summary {
-            > .tags {
-              > .tag.release {
-                background-color: var(--primary);
-                color: var(--secondary);
-              }
-            }
-          }
-        }
-      }
+
+  >main {
+    >.content {
+
       & .blogPost:hover,
       .blogPost:focus-within {
         background-color: var(--secondary10);
       }
+
       & p {
-        > a {
+        >a {
           color: var(--accentLight);
-          position: relative;
         }
-        > a::after {
-          position: absolute;
-          content: "";
+
+        >a::after {
           background-color: var(--accentLight);
-          height: 3px;
-          inset: 0;
-          transform: translateY(20px) scaleX(0) skew(calc(var(--skew) * -1));
-          transform-origin: right center;
-          transition: transform 250ms ease-in-out;
-        }
-        > a:hover::after {
-          transform: translateY(20px) scaleX(1) skew(calc(var(--skew) * -1));
-          transform-origin: left center;
         }
       }
     }
-    > .content.fit {
-      height: fit-content;
-    }
   }
-  > footer {
-    > nav {
+
+  >footer {
+    >nav {
       .logo {
-        > .logoLight {
+        >.logoLight {
           display: none;
         }
-        > .logoDark {
+
+        >.logoDark {
           display: block;
         }
       }
@@ -1657,19 +1448,21 @@ svg.darkModeToggleSVG {
   transform: translateY(10%);
   display: none;
 }
+
 svg.darkModeToggleSVG.toggle {
   display: block;
 }
 
 /**!---------- Keyframes usage, (they don't work while indented) ----------!**/
-.overflay > a > svg.scrollArrows > path:nth-child(1) {
+.overflay>a>svg.scrollArrows>path:nth-child(1) {
   animation: scrollArrowsFlash 2000ms infinite;
 }
 
-.overflay > a > svg.scrollArrows > path:nth-child(2) {
+.overflay>a>svg.scrollArrows>path:nth-child(2) {
   animation: scrollArrowsFlash 2000ms 100ms infinite;
 }
-.overflay > a > svg.scrollArrows > path:nth-child(3) {
+
+.overflay>a>svg.scrollArrows>path:nth-child(3) {
   animation: scrollArrowsFlash 2000ms 200ms infinite;
 }
 
@@ -1678,16 +1471,19 @@ svg.darkModeToggleSVG.toggle {
     transform: translateY(-10dvh);
     opacity: 0;
   }
+
   25% {
     transform-origin: top center;
     transform: translateY(0);
     opacity: 1;
   }
+
   75% {
     transform-origin: bottom center;
     transform: translateY(0);
     opacity: 1;
   }
+
   100% {
     transform-origin: bottom center;
     transform: translateY(10dvh);
@@ -1695,8 +1491,8 @@ svg.darkModeToggleSVG.toggle {
   }
 }
 
-.branding > span,
-.branding > p {
+.branding>span,
+.branding>p {
   animation: slideIn 1500ms forwards;
 }
 
@@ -1705,10 +1501,12 @@ svg.darkModeToggleSVG.toggle {
     transform: translateX(-100px);
     opacity: 0;
   }
+
   70% {
     opacity: 0;
     transform: translateX(-50px);
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -1723,7 +1521,7 @@ svg.darkModeToggleSVG.toggle {
   animation: carouselMarkerLoad 5000ms forwards;
 } */
 
-.carousel__slide > svg {
+.carousel__slide>svg {
   animation: carouselBgPan 60000ms infinite alternate-reverse linear;
 }
 
@@ -1733,14 +1531,17 @@ svg.darkModeToggleSVG.toggle {
     transform-origin: top center;
     transform: scaleY(0);
   }
+
   95% {
     transform-origin: top center;
     transform: scaleY(1);
   }
+
   96% {
     transform-origin: bottom center;
     transform: scaleY(1);
   }
+
   100% {
     transform-origin: bottom center;
     transform: scaleY(0);
@@ -1752,6 +1553,7 @@ svg.darkModeToggleSVG.toggle {
     transform-origin: top center;
     transform: scaleY(0);
   }
+
   100% {
     transform-origin: top center;
     transform: scaleY(1);
@@ -1762,24 +1564,25 @@ svg.darkModeToggleSVG.toggle {
   0% {
     left: 40%;
   }
+
   100% {
     left: -20%;
   }
 }
 
-.carousel__slide.current-slide > .hero {
+.carousel__slide.current-slide>.hero {
   animation: carouselEntryLeft 500ms 150ms forwards;
 }
 
-.carousel__slide.current-slide > img {
+.carousel__slide.current-slide>img {
   animation: carouselEntryRight 500ms 150ms forwards;
 }
 
-.carousel__slide.current-slide.reversed > .hero {
+.carousel__slide.current-slide.reversed>.hero {
   animation: carouselEntryRight 500ms 150ms forwards;
 }
 
-.carousel__slide.current-slide.reversed > img {
+.carousel__slide.current-slide.reversed>img {
   animation: carouselEntryLeft 500ms 150ms forwards;
 }
 
@@ -1788,9 +1591,11 @@ svg.darkModeToggleSVG.toggle {
     transform: translateX(-100%);
     opacity: 0;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     transform: translateX(inset);
     opacity: 1;
@@ -1802,9 +1607,11 @@ svg.darkModeToggleSVG.toggle {
     transform: translateX(100%);
     opacity: 0;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     transform: translateX(inset);
     opacity: 1;
@@ -1815,20 +1622,22 @@ svg.ctaArrow {
   animation: ctaArrowWiggle 1500ms ease-out infinite;
 }
 
-a:hover > svg.ctaArrow {
+a:hover>svg.ctaArrow {
   animation: ctaArrowFlash 800ms ease-out infinite;
 }
 
-a:hover > svg.ctaArrow.pulse {
+a:hover>svg.ctaArrow.pulse {
   animation: ctaArrowPulse 800ms ease-out infinite;
 }
 
 /**?---------- Arrows on CTAs animation ----------?**/
 @keyframes ctaArrowWiggle {
+
   0%,
   100% {
     transform: translateX(0) translateY(20%);
   }
+
   50% {
     transform: translateX(5%) translateY(20%);
   }
@@ -1839,14 +1648,17 @@ a:hover > svg.ctaArrow.pulse {
     transform-origin: left center;
     transform: scaleX(0) translateY(20%);
   }
+
   25% {
     transform-origin: left center;
     transform: scaleX(1) translateY(20%);
   }
+
   75% {
     transform-origin: right center;
     transform: scaleX(1) translateY(20%);
   }
+
   100% {
     transform-origin: right center;
     transform: scaleX(0) translateY(20%);
@@ -1859,16 +1671,19 @@ a:hover > svg.ctaArrow.pulse {
     transform: translateX(0%) scaleX(0) translateY(20%);
     opacity: 0;
   }
+
   25% {
     transform-origin: left center;
     transform: translateX(20%) scaleX(1) translateY(20%);
     opacity: 1;
   }
+
   75% {
     transform-origin: right center;
     transform: translateX(20%) scaleX(1) translateY(20%);
     opacity: 1;
   }
+
   100% {
     transform-origin: right center;
     transform: translateX(50%) scaleX(0) translateY(20%);
@@ -1883,26 +1698,26 @@ a:hover > svg.ctaArrow.pulse {
     box-shadow: 0px 0px 0px var(--secondary);
     opacity: 0;
   }
+
   100% {
     top: 0%;
-    transform: translateY(25%) translateX(-350%) skew(calc(var(--skew) * -1.3))
-      rotate(0deg);
+    transform: translateY(25%) translateX(-350%) skew(calc(var(--skew) * -1.3)) rotate(0deg);
     box-shadow: 5px 5px 0px var(--secondary);
     opacity: 1;
   }
 }
 
 @keyframes titleAccentIdle {
+
   0%,
   100% {
     top: 0%;
-    transform: translateY(25%) translateX(-350%) skew(calc(var(--skew) * -1.3))
-      rotate(0deg);
+    transform: translateY(25%) translateX(-350%) skew(calc(var(--skew) * -1.3)) rotate(0deg);
   }
+
   50% {
     top: 0%;
-    transform: translateY(40%) translateX(-350%) skew(calc(var(--skew) * -1.3))
-      rotate(0deg);
+    transform: translateY(40%) translateX(-350%) skew(calc(var(--skew) * -1.3)) rotate(0deg);
   }
 }
 
@@ -1913,27 +1728,26 @@ a:hover > svg.ctaArrow.pulse {
     box-shadow: 0px 0px 0px var(--secondary);
     opacity: 0;
   }
+
   100% {
     top: 100%;
-    transform: translateY(-125%) translateX(-250%)
-      skew(calc(var(--skew) * -1.3)) rotate(0deg);
+    transform: translateY(-125%) translateX(-250%) skew(calc(var(--skew) * -1.3)) rotate(0deg);
     box-shadow: 5px 5px 0px var(--secondary);
     opacity: 1;
   }
 }
 
 @keyframes titleAccentSecondIdle {
+
   0%,
   100% {
     top: 100%;
-    transform: translateY(-125%) translateX(-250%)
-      skew(calc(var(--skew) * -1.3)) rotate(0deg);
+    transform: translateY(-125%) translateX(-250%) skew(calc(var(--skew) * -1.3)) rotate(0deg);
   }
 
   50% {
     top: 100%;
-    transform: translateY(-110%) translateX(-250%)
-      skew(calc(var(--skew) * -1.3)) rotate(0deg);
+    transform: translateY(-110%) translateX(-250%) skew(calc(var(--skew) * -1.3)) rotate(0deg);
   }
 }
 
@@ -1944,9 +1758,11 @@ a:hover > svg.ctaArrow.pulse {
     transform: translateX(150%);
     opacity: 0;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -1958,9 +1774,11 @@ a:hover > svg.ctaArrow.pulse {
     transform: translateX(0%);
     opacity: 1;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     transform: translateX(150);
     opacity: 0;
@@ -1969,18 +1787,21 @@ a:hover > svg.ctaArrow.pulse {
 
 /**!---------- Media queries ----------!**/
 @media screen and (max-width: 1500px) {
-  .branding > span,
-  .branding > p:not(p:nth-child(1)) {
+
+  .branding>span,
+  .branding>p:not(p:nth-child(1)) {
     display: none;
   }
 }
 
 @media screen and (max-width: 1000px) {
   @keyframes ctaArrowWiggle {
+
     0%,
     100% {
       transform: scale(0.6) translateX(0) translateY(50%);
     }
+
     50% {
       transform: scale(0.6) translateX(5%) translateY(50%);
     }
@@ -1991,14 +1812,17 @@ a:hover > svg.ctaArrow.pulse {
       transform-origin: left center;
       transform: scale(0.6) scaleX(0) translateY(50%);
     }
+
     25% {
       transform-origin: left center;
       transform: scale(0.6) scaleX(1) translateY(50%);
     }
+
     75% {
       transform-origin: right center;
       transform: scale(0.6) scaleX(1) translateY(50%);
     }
+
     100% {
       transform-origin: right center;
       transform: scale(0.6) scaleX(0) translateY(50%);
@@ -2011,16 +1835,19 @@ a:hover > svg.ctaArrow.pulse {
       transform: scale(0.6) translateX(0%) scaleX(0) translateY(50%);
       opacity: 0;
     }
+
     25% {
       transform-origin: left center;
       transform: scale(0.6) translateX(20%) scaleX(1) translateY(50%);
       opacity: 1;
     }
+
     75% {
       transform-origin: right center;
       transform: scale(0.6) translateX(20%) scaleX(1) translateY(50%);
       opacity: 1;
     }
+
     100% {
       transform-origin: right center;
       transform: scale(0.6) translateX(50%) scaleX(0) translateY(50%);
@@ -2033,9 +1860,11 @@ a:hover > svg.ctaArrow.pulse {
       transform: translateX(100%);
       opacity: 0;
     }
+
     50% {
       opacity: 0;
     }
+
     100% {
       transform: translateX(-20%);
       opacity: 1;
@@ -2047,9 +1876,11 @@ a:hover > svg.ctaArrow.pulse {
       transform: translateX(100%);
       opacity: 0;
     }
+
     50% {
       opacity: 0;
     }
+
     100% {
       transform: translateX(0%);
       opacity: 1;
@@ -2073,25 +1904,32 @@ a:hover > svg.ctaArrow.pulse {
     --textWeight: 500;
     --textLineHeight: 25px;
   }
+
   .overflay {
     display: none;
   }
+
   .socials {
     display: none !important;
   }
+
   header:has(.navbar.active) {
     background-color: var(--primary) !important;
     transition: background-color 0ms ease-in-out !important;
   }
+
   header .logo {
     z-index: 2;
   }
+
   footer .logo {
     padding-left: 0px !important;
   }
+
   header nav {
     position: relative;
   }
+
   header .navbar {
     position: absolute;
     right: 0;
@@ -2100,165 +1938,140 @@ a:hover > svg.ctaArrow.pulse {
     transition: background-color 250ms ease-in-out;
     z-index: 1;
   }
+
   header .navbar.active {
     background-color: var(--primary);
     width: 100%;
   }
-  header .navbar > ul {
+
+  header .navbar>ul {
     display: grid !important;
   }
+
   .navbarToggle {
     display: block !important;
     width: 100%;
     display: flex !important;
     justify-content: flex-end;
   }
-  .navbarToggle > svg:not(svg.toggle) {
+
+  .navbarToggle>svg:not(svg.toggle) {
     display: none;
   }
-  header .navbar > ul > li:not(:first-child) {
+
+  header .navbar>ul>li:not(:first-child) {
     text-align: end;
     transform: translateX(200%);
   }
-  header .navbar:not(.active) > ul > li:not(:first-child) {
+
+  header .navbar:not(.active)>ul>li:not(:first-child) {
     animation: menuExitRight 250ms forwards ease-in-out;
   }
-  header .navbar.active > ul > li:not(:first-child) {
+
+  header .navbar.active>ul>li:not(:first-child) {
     animation: menuEntryRight 250ms forwards ease-in-out;
   }
-  .navbar > ul > li:nth-child(1) > button {
+
+  .navbar>ul>li:nth-child(1)>button {
     padding-bottom: 0 !important;
   }
-  .navbar > ul > span {
+
+  .navbar>ul>span {
     display: none;
   }
+
   main {
     z-index: 5;
   }
+
   .carousel {
     height: 40dvh !important;
     width: 100%;
-    overflow-y: hidden;
-    position: relative;
-    > .carousel__track-container {
-      > .carousel__track {
-        > .carousel__slide {
-          > svg {
+
+    >.carousel__track-container {
+      >.carousel__track {
+        >.carousel__slide {
+          >svg {
             animation: unset !important;
           }
-          > .hero {
+
+          >.hero {
             width: 50%;
             transform: translateX(30px) !important;
-            > p {
+
+            >p {
               margin-bottom: 10px !important;
             }
           }
         }
-        > .carousel__slide.reversed {
-          > svg {
-            left: -20%;
-          }
-          > .hero {
+
+        >.carousel__slide.reversed {
+          >.hero {
             transform: translateX(-45px) !important;
-            order: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-            > h2 {
-              text-align: right;
-            }
-            > p {
-              text-align: right;
-            }
           }
         }
-        > .carousel__slide.current-slide {
-          z-index: 1;
-          background-color: var(--primary);
-        }
-      }
-    }
-    > .carousel__nav {
-      position: absolute;
-      z-index: 2;
-      right: 10px;
-      bottom: 10px;
-      display: grid;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 5px;
-      > .carousel__indicator {
-        border: transparent;
-        background-color: var(--secondary50);
-        width: 8px;
-        aspect-ratio: 1 / 5;
-        transform: skewY(25deg);
-        position: relative;
-        transition: opacity 250ms ease-in-out;
-      }
-      > .carousel__indicator.current-slide::after {
-        content: "";
-        background-color: var(--accentDark);
-        inset: 0;
-        width: 100%;
-        transform: scaleY(0);
-        position: absolute;
-        animation: carouselMarkerLoad 5000ms forwards;
       }
     }
   }
+
   .content.fit-mobile {
     height: fit-content;
   }
-  .content > br:not(h2 + br) {
+
+  .content>br:not(h2 + br) {
     display: none;
   }
+
   .content:not(:first-child) {
     padding: 20px 20px 0px 20px !important;
   }
+
   .content:last-child {
     padding: 20px !important;
   }
-  .carousel + .content:not(:first-child) {
+
+  /* .carousel + .content:not(:first-child) {
     padding: 100px 100px 50px 100px;
-  }
+  } */
   .content,
   .content:first-child {
     padding: 100px 20px 20px 20px !important;
   }
+
   .accent::after,
   .accent::before {
     display: none;
   }
+
   .twoBlocs {
     grid-template-columns: unset !important;
-    gap: 20px !important;
     padding-bottom: 50px;
-    > img {
+
+    >img {
       max-width: 50vw !important;
-      aspect-ratio: 1;
-      object-fit: contain;
     }
-    > .info {
+
+    >.info {
       gap: 20px !important;
     }
   }
+
   .twoBlocs:last-child {
     padding-bottom: 0px;
   }
+
   .gridBlocs {
     grid-template-columns: unset !important;
     justify-items: left !important;
     padding-block: 0px 50px !important;
-    > .info {
+
+    >.info {
       gap: 20px !important;
     }
   }
+
   .blogPost {
     grid-template-columns: unset !important;
-    & .tags {
-      flex-wrap: wrap;
-    }
   }
 }
 
@@ -2280,42 +2093,47 @@ a:hover > svg.ctaArrow.pulse {
     --textWeight: 500;
     --textLineHeight: 25px;
   }
+
   .socials {
     display: block !important;
   }
+
   .carousel {
     height: 100dvh !important;
-    width: 100%;
-    overflow-y: hidden;
-    position: relative;
-    > .carousel__track-container {
-      > .carousel__track {
-        > .carousel__slide {
+
+    >.carousel__track-container {
+      >.carousel__track {
+        >.carousel__slide {
           flex-direction: column;
           gap: 20px !important;
           justify-content: center !important;
-          > .hero {
+
+          >.hero {
             width: 90% !important;
             margin: 0px auto;
             transform: translateX(0) !important;
           }
-          > img {
+
+          >img {
             max-width: 90vw !important;
-            width: 90% !important;
+            width: 65% !important;
             height: unset !important;
             aspect-ratio: 1;
             margin: 0 auto;
           }
         }
-        > .carousel__slide.reversed {
+
+        >.carousel__slide.reversed {
           flex-direction: column;
           gap: 20px !important;
           justify-content: center !important;
-          > .hero {
+
+          >.hero {
             margin: 0px auto;
             transform: translateX(0) !important;
           }
-          > img {
+
+          >img {
             order: 2 !important;
             margin: 0px auto;
           }
@@ -2324,19 +2142,20 @@ a:hover > svg.ctaArrow.pulse {
     }
   }
 
-  .carousel__slide.current-slide > img {
+  .carousel__slide.current-slide>img {
     animation: carouselEntryRightAlt 500ms 150ms forwards;
   }
 
   .threeBlocs {
     grid-template-columns: unset !important;
     gap: 50px !important;
-    > .info {
+
+    >.info {
       gap: 20px !important;
     }
   }
 
-  footer > nav {
+  footer>nav {
     flex-direction: column;
     gap: 25px;
   }
