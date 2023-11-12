@@ -10,7 +10,8 @@ const carouselSetup = () => {
 
     //* Pushes as much navdots as there are slides in the carousel, for a better reusability
     for (let i = 0; i < slides.length; i++) {
-      dotsNav.innerHTML += '<button class="carousel__indicator"></button>';
+      dotsNav.innerHTML +=
+        '<button class="carousel__indicator"  aria-label="Carousel indicator"></button>';
     }
     const dots = Array.from(dotsNav.children);
     dots[0].classList.add("current-slide");
