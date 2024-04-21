@@ -1,5 +1,15 @@
 const blogData = [
   {
+    title: "V2.0.0 - Jet Stream",
+    summary:
+      "<p>Say hello to Jet Stream, the all-new version of LightningUI !</p>",
+    tags: "<span class='tag release'>Release</span>",
+    date: "<p>-&nbsp;&nbsp; April 21, 2024</p>",
+    content:
+      "<p>After months and months without any news regarding this project, I'm finally back and I'm proud to bring to you the new version of this library.</p><p><span>And what an update it is!</span></p><p>I've been able to test out the library in a real project and I must say that I had plenty of adjustements to do. Still, it went fairly well, convincing me to keep pushing updates to this library ; it is worth it. Customizing it to the customer's needs was a piece of cake and took about an hour to change the website's look from LightningUI's signature yellow to the customer's theme.</p><p>Many MANY things have changed. Changements include :</p><br/><ul><li><span>Bug fixes</span></li><li><span>Reworked components</span></li><li><span>New features</span></li><li><span>Brand new components</span></li></ul><br/><p>Even though there's still work to do, we're heading towards the good direction.</p><p>As you've probably already seen by now, the website's got a little overall as well, a much needed one. Yellow everywhere started to hurt my eyes and quickly started to look cheap. With more contrasted colors and various tweaks here and there, it now looks more professional and the color touches really bring it to life.</p><p>Maybe you've noticed the new dropdown for the components' section, even though the pages exist, the content is for now the exact same as the components page, it's due to change soon when I'll have a bit more time.<p><p>Thank you for checking in on LightningUI ! I hope those changes will benefit you and your projects as much as they benefited mine. Thank you as well for your patience. I hope the wait was worth it for you, sincerely.</p><br/><p>Cédric, founder of Lightning UI</p>",
+    img: "../assets/logoLight.svg",
+  },
+  {
     title: "V1.0.2 - Macroburst",
     summary:
       "<p>A huge optimization update was due, and it's finally here !</p>",
