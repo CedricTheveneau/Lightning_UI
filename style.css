@@ -3121,6 +3121,11 @@ a:hover>svg.ctaArrow.pulse {
     >li {
       display: unset !important;
       transform: none !important;
+
+      >a {
+        color: var(--themeDark) !important;
+        --afterColor: var(--themeDark) !important;
+      }
     }
   }
 
