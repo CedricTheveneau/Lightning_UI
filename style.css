@@ -2280,6 +2280,11 @@ body.dark {
         >ul.links {
           >* {
 
+            >ul.dropdown>li>a {
+              color: var(--themeLight);
+              --afterColor: var(--themeLight);
+            }
+
             >button {
               >a {
                 color: var(--themeLight);
