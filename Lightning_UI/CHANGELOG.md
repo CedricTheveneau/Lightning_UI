@@ -21,3 +21,5 @@ The components have been splitted into their own pages to facilitate the search 
 This new version represents a break from the prevous ones and if you intended to start using Lightning UI, I'd recommend using this version, as all future features and fixes will be based on it.
 
 If you used a previous version of LightningUI, I'd recommend getting the latest version of the JS and CSS files and copy-pasting elements from the component page to make sure you have the latest version of them which will work properly.
+
+Removal of the components.html file from the zip file as everything's hosted on the website.
